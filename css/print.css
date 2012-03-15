@@ -1,0 +1,10 @@
+/* PRINT CSS
+*********************************************/
+@import url("reset.css");
+
+html {height:100%; margin-bottom:1px; overflow-y:scroll;}
+body {background-color:#fff; color:#000; font:normal normal normal 75%/125% arial,sans-serif; height:100%; text-align:center;}
+
+/* LAYOUT
+*********************************************/
+#overall {height:100%; margin:0 auto; text-align:left; width:100%;}

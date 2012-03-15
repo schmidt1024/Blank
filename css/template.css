@@ -1,0 +1,26 @@
+/* TEMPLATE CSS
+*********************************************/
+html {height:100%; margin-bottom:1px; overflow-y:scroll;}
+body {background-color:#fff; color:#000; font:normal normal normal 75%/125% arial,sans-serif; height:100%; text-align:center;}
+
+/* LAYOUT
+*********************************************/
+#overall {height:100%; margin:0 auto; text-align:left; width:100%;}
+
+	#header {}
+	#main {}
+	#footer {}
+
+/* Layout Classes */
+	.inheader {}
+	.inmain {}
+	.infooter {}
+
+/* Floats */
+.float-left {float:left;}
+.float-right {float:right;}
+.group:before, .group:after {content:""; display:table;}
+.group:after {clear:both;}
+.ie6 .group {zoom:1;}
+.ie7 .group {zoom:1;}
+

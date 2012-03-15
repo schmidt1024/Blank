@@ -1,0 +1,26 @@
+/* OFFLINE CSS
+*********************************************/
+body {color:#000; font-family:Arial,Helvetica,Sans Serif; font-size:78%; margin:0; padding:0; text-align:center;}
+img  {border:0 none;}
+
+/* LAYOUT
+*********************************************/
+#frame {margin:20px auto; padding:20px; width:400px;}
+#frame form {text-align:left;}
+
+/* class styles */
+.outline {background:#fff; border:1px solid #ebe7d9; padding:2px;}
+.inputbox {width:130px;}
+
+/* form styles */
+form {margin:auto;}
+form p {margin:0; padding:0;}
+form fieldset {border:0 none; margin:0; padding:0.2em;}
+label {display:block; float:left;}
+input {padding:3px;}
+input.button {cursor:pointer; width:auto;}
+label {margin:5px 0 2px 0; width:10em;}
+form p {padding:0.2em 0 0.2em 0;}
+form br {display:none;}
+#frmlogin {margin:0 10px 0 10px;}
+#frmlogin fieldset.button {text-align:right;}
