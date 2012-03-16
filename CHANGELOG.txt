@@ -23,6 +23,8 @@ $ -> Language fix or change
 ^ offline.php: delete line 49, repeating offline message;
                named space (&nbsp;) in line 64;
 ^ error.php: add / to href in line 44
+^ templateDetails.xml: changing install method from <install>
+                       to <extension> | thx Falkone
 
 -------------------- 1.1.11 [2012-02-20] ------------------
 ^ index.php: text encoding to utf8 | thx Caglar Yanik
