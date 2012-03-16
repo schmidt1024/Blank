@@ -19,7 +19,7 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
--------------------- 1.1.12 [2012-02-23] ------------------
+-------------------- 1.1.12 [2012-03-16] ------------------
 ^ offline.php: delete line 49, repeating offline message;
                named space (&nbsp;) in line 64;
 ^ error.php: add / to href in line 44
