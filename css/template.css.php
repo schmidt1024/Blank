@@ -40,3 +40,10 @@ function compress($buffer) {
 	
 	return $buffer;
 }
+
+require('reset.css');
+require('template.css');
+require('../../../media/system/css/system.css');
+require('../../system/css/system.css');
+require('../../system/css/general.css');
+?>
