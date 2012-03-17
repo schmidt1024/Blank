@@ -1,7 +1,7 @@
 <?php 
 /*------------------------------------------------------------------------
 # author    your name or company
-# copyright Copyright ｩ 2011 example.com. All rights reserved.
+# copyright Copyright © 2011 example.com. All rights reserved.
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website   http://www.example.com
 -------------------------------------------------------------------------*/
@@ -23,9 +23,9 @@ header($ExpStr);
 /* Begin function compress */
 function compress($buffer) {
 	/* remove comments */
-	$buffer = preg_replace('!/¥*[^*]*¥*+([^/][^*]*¥*+)*/!', '', $buffer);
+	$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
 	/* remove tabs, spaces, new lines, etc. */        
-	$buffer = str_replace(array("¥r¥n","¥r","¥n","¥t",'  ','    ','    '),'',$buffer);
+	$buffer = str_replace(array("\r\n","\r","\n","\t",'  ','    ','    '),'',$buffer);
 	/* remove unnecessary spaces */        
 	$buffer = str_replace('{ ', '{', $buffer);
 	$buffer = str_replace(' }', '}', $buffer);
@@ -40,10 +40,3 @@ function compress($buffer) {
 	
 	return $buffer;
 }
-
-require('reset.css');
-require('template.css');
-require('../../../media/system/css/system.css');
-require('../../system/css/system.css');
-require('../../system/css/general.css');
-?>
