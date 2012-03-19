@@ -21,6 +21,7 @@ $ -> Language fix or change
 
 -------------------- 1.1.13 [2012-03-17] ------------------
 ^ template.css.php: Replace all ¥ with \ | thx Eric Bode
+^ error.php: add / to href in line 35
 
 -------------------- 1.1.12 [2012-03-16] ------------------
 ^ offline.php: delete line 49, repeating offline message;
