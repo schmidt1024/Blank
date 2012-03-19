@@ -32,7 +32,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 <body>
   <div align="center">
     <div id="error">
-      <h1 align="center"><a href="<?php echo $this->baseurl; ?>" class="ihrlogo">IhrLogo</a></h1>
+      <h1 align="center"><a href="<?php echo $this->baseurl; ?>/" class="ihrlogo">IhrLogo</a></h1>
       <?php 
         echo $this->error->getCode().' - '.$this->error->getMessage(); 
         if (($this->error->getCode()) == '404') {
