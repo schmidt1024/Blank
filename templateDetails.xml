@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+
 <extension version="2.5" type="template" method="upgrade">
-	<name>templatename</name>
-	<creationDate>xxxx-xx-xx</creationDate>
-	<author>your name</author>
-	<copyright>Copyright © xxxx example.com</copyright>
-	<authorEmail>your.name@example.com</authorEmail>
-	<authorUrl>http://www.example.com</authorUrl>
-	<version>1.0.0</version>
-	<description><![CDATA[
-		<h1>templatename</h1>
-		<p><img src="../templates/templatename/template_preview.png" /></p>
-		<h2>Module positions</h2>
-		<ol>
-			<li>header</li>
-			<li>menu</li>
-			<li>footer</li>
-			<li>debug</li>
-		</ol>
-		<p>Created by <a href="http://www.example.com" target="_blank">your name | example.com</a>.</p>
-	]]></description>
 	
-	<files>
+	<name>templatename</name><!-- name the template -->
+	<creationDate>xxxx-xx-xx</creationDate><!-- the date your are beginn to code -->
+	<author>your name</author><!-- your name (oops, I repeat myself) -->
+	<copyright>Copyright © xxxx example.com</copyright><!-- for who you are coding -->
+	<authorEmail>your.name@example.com</authorEmail><!-- your email address -->
+	<authorUrl>http://www.example.com</authorUrl><!-- your url -->
+	<version>1.2.0</version><!-- give your template a number -->
+	<description>TPL_TEMPLATENAME_DESCRIPTION</description><!-- look at the language files to change -->
+	
+	<files><!-- no need to change -->
 		<folder>css</folder>
 		<folder>html</folder>
 		<folder>images</folder>
@@ -39,23 +30,40 @@
 		<filename>templateDetails.xml</filename>
 	</files>
 	
-	<languages folder="language">
+	<languages folder="language"><!-- no need to change -->
 		<language tag="de-DE">de-DE.tpl_templatename.ini</language>
 		<language tag="en-GB">en-GB.tpl_templatename.ini</language>
 	</languages>
 	
-	<positions>
-		<position>header</position>
-		<position>menu</position>
-		<position>footer</position>
+	<positions><!-- define the positions for modules here -->
 		<position>debug</position>
 	</positions>
 	
-	<config>
+	<config><!-- no need to change -->
 		<fields name="params">
-			<fieldset name="advanced">
-				<field name="FIELD_SPACER_HEADER_DESC" type="spacer" hr="false" />
+			<fieldset name="basic">
+			  <!-- MODERNIZR-->
+  			  <field name="modernizr" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_LABEL" description="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DESC">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+  				<field name="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DOC" type="spacer" hr="false" />
+  				<field type="spacer" hr="true" />
+		    <!-- TWITTER BOOTSTRAP-->
+  		    <field name="bootstrap" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_LABEL" description="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DESC">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+  				<field name="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DOC" type="spacer" hr="false" />
+  				<field type="spacer" hr="true" />
+				<!-- PIE-->
+  				<field name="pie" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+  				<field name="TPL_TEMPLATENAME_PARAMETER_PIE_DOC" type="spacer" hr="false" />
 			</fieldset>
 		</fields>
 	</config>
+	
 </extension>

@@ -19,6 +19,75 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
+-------------------- 1.2.0 [2012-07-24] -------------------
+! lines without brace are specified to version 1.1.13 (for own rebuilding)
+! lines in brace specified to 1.2
++ Twitter Bootstrap (as optional parameter)
+  + bootstrap-responsive.min.css
+  + bootstrap.min.css
+  + glyphicons-halflings-white.png
+  + glyphicons-halflings.png
+  + bootstrap.min.js
+  + jquery-1.7.2.min.js
++ PIE.js
++ PIE.php
+^ index.php
+  # line 14: delete ampersand; from &$app to $app
+  + get parameters modernizr, bootstrap and pie (line 11-14)
+  + ask parameter pie for css3 support of ie 8+7 (line 27)
+  ^ ask parameter moderizr to load script in head (line 47+53)
+  - line 31: delete conditional comment for ie6
+  - line 40: delete link to tablet.css; integrate 
+    media queries in template.css to reduce http requests
+  - line 41: delete link to phone.css; integrate 
+    media queries in template.css to reduce http requests
+  - line 42: delete link to phone.css through conditional
+    comment for iemobile; media queries in template.css
+  - delete everything between <body> and </body> except the 
+    debug position
+^ component.php
+  + line 37: php and js statement to print directly | thx Markus Hermann
+  - line 16: delete conditional comment for ie6
+^ error.php
+  - line 16: delete conditional comment for ie6
+^ offline.php
+  - line 24: delete conditional comment for ie6
+^ template.js.php
+  + query parameter bootstrap (line 10)
+  + query jquery.js and bootstrap.js (line 27+28)
+^ template.css.php
+  + query parameter bootstrap (line 10)
+  + query require stylesheets for bootstrap (line 47+50)
+  ^ line 14: from charset:UTF-8 to charset=UTF-8 | thx Caglar Yanik
+^ template.css
+  + line 26: media queries statements for desktops, tablets and phones
+  ^ line 4: delete text-align:center;
+  - delete all LAYOUT definitions
+  - line 24: delete .ie6 .group {zoom:1;}
+^ print.css
+  + line 4: @import editor.css
+  - from line 4: all selectors incl. attributes
+^ editor.css
+  ^ line 3: additional font attribute
+^ reset.css
+  + line 13 and 14: separate sup and sub attributes | thx Markus Hermann
+  ^ line 12: additional attributs for sup and sub | thx Markus Hermann
+^ bootstrap-responsive.min.css
+  ^ change image path from img/ to images/
+^ templateDetails.xml
+  + parameter modernizr
+  + parameter bootstrap
+  + parameter pie
+  ^ description with language variable
+^ de-DE.tpl_templatename.ini
+  ^ rewriting with variables of templateDetails.xml
+^ en-GB.tpl_templatename.ini
+  ^ rewriting with variables of templateDetails.xml
+^ modernizr.js to 2.6.1
+^ PIE.htc to 1.0.0 
+- phone.css
+- tablet.css
+
 -------------------- 1.1.13 [2012-03-17] ------------------
 ^ template.css.php: Replace all ¥ with \ | thx Eric Bode
 ^ error.php: add / to href in line 35

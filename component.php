@@ -13,7 +13,6 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 ?><!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="<?php echo $this->language; ?>"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="<?php echo $this->language; ?>"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="<?php echo $this->language; ?>"> <![endif]-->
 <!--[if gt IE 8]><!-->  <html class="no-js" lang="<?php echo $this->language; ?>"> <!--<![endif]-->
@@ -34,6 +33,11 @@ $this->setGenerator(null);
     <jdoc:include type="message" />
     <jdoc:include type="component" />
   </div>
+  <?php
+    if ( 1== (int)JRequest::get('print') ) {
+      echo '<script type="text/javascript">window.print();</script>';
+    }
+  ?>
 </body>
 
 </html>
