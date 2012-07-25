@@ -10,7 +10,18 @@
 	<authorEmail>your.name@example.com</authorEmail><!-- your email address -->
 	<authorUrl>http://www.example.com</authorUrl><!-- your url -->
 	<version>1.2.0</version><!-- give your template a number -->
-	<description>TPL_TEMPLATENAME_DESCRIPTION</description><!-- look at the language files to change -->
+	<description><![CDATA[
+		<h1>templatename</h1>
+		<p><img src="../templates/templatename/template_preview.png" /></p>
+		<h2>Module positions</h2>
+		<ol>
+			<li>header</li>
+			<li>menu</li>
+			<li>footer</li>
+			<li>debug</li>
+		</ol>
+		<p>Created by <a href="http://www.example.com" target="_blank">your name | example.com</a>.</p>
+	]]></description><!-- change the description as you like -->
 	
 	<files><!-- no need to change -->
 		<folder>css</folder>
