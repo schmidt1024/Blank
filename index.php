@@ -11,7 +11,7 @@ defined( '_JEXEC' ) or die;
 // variables
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument(); 
-$params = $app->getParams();
+$params = &$app->getParams();
 $pageclass = $params->get('pageclass_sfx');
 $tpath = $this->baseurl.'/templates/'.$this->template;
 
