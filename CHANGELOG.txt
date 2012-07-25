@@ -19,7 +19,7 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
--------------------- 1.2.0 [2012-07-24] -------------------
+-------------------- 1.2.0 [2012-07-25] -------------------
 ! lines without brace are specified to version 1.1.13 (for own rebuilding)
 ! lines in brace specified to 1.2
 + Twitter Bootstrap (as optional parameter)
@@ -31,6 +31,7 @@ $ -> Language fix or change
   + jquery-1.7.2.min.js
 + PIE.js
 + PIE.php
++ README.md
 ^ index.php
   # line 14: delete ampersand; from &$app to $app
   + get parameters modernizr, bootstrap and pie (line 11-14)
@@ -85,6 +86,7 @@ $ -> Language fix or change
   ^ rewriting with variables of templateDetails.xml
 ^ modernizr.js to 2.6.1
 ^ PIE.htc to 1.0.0 
+- README
 - phone.css
 - tablet.css
 
