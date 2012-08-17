@@ -25,7 +25,7 @@ $this->setGenerator(null);
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/apple-touch-icon-114x114.png"> <!-- iphone retina -->
   <link href="<?php echo $tpath; ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /> <!-- favicon -->
   <link rel="stylesheet" href="<?php echo $tpath; ?>/css/print.css?v=1.0.0" type="text/css" /> <!-- stylesheet -->
-  <script src="<?php echo $tpath; ?>js/modernizr.js"></script> <!-- put all javascripts at the bottom, accept of modernizr.js -->
+  <script src="<?php echo $tpath; ?>/js/modernizr.js"></script> <!-- put all javascripts at the bottom, accept of modernizr.js -->
 </head>
 
 <body id="print">

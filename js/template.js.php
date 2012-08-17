@@ -6,13 +6,6 @@
 # Website   http://www.example.com
 -------------------------------------------------------------------------*/
 
-// parameter
-$bootstrap = $_GET['b'];
-
-// initialize ob_gzhandler to send and compress data
-ob_start ("ob_gzhandler");
-// initialize compress function for whitespace removal
-ob_start("compress");
 // required header info and character set
 header("Content-type: application/x-javascript");
 // cache control to process
@@ -23,6 +16,9 @@ $offset = 60 * 60 ;
 $ExpStr = "Expires: " . gmdate("D, d M Y H:i:s",time() + $offset) . " GMT";
 // send cache expiration header to broswer
 header($ExpStr);
+
+// parameter
+$bootstrap = $_GET['b'];
 
 if ($bootstrap==1) require('jquery-1.7.2.min.js');
 if ($bootstrap==1) require('bootstrap.min.js');
