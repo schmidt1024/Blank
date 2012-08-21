@@ -20,8 +20,17 @@ $ -> Language fix or change
 ! -> Note
 
 -------------------- 1.2.1 [2012-08-14] -------------------
+^ Update Twitter Bootstrap
+  ^ bootstrap-responsive.min.css
+  ^ bootstrap.min.css: update file and path to images
+  ^ glyphicons-halflings-white.png
+  ^ glyphicons-halflings.png
+  ^ bootstrap.js
+  ^ bootstrap.min.js
+^ Update jQuery from 1.7.2 to 1.8.0
+  ^ jquery-1.8.0.min.js
 ^ component.php: add a / to the link to modernizr.js in line 28
-^ template.js.php: remove obsolete compress function
+^ template.js.php: remove obsolete compress function; update jquery
 
 -------------------- 1.2.0 [2012-07-25] -------------------
 ! lines without brace are specified to version 1.1.13 (for own rebuilding)
