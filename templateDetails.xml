@@ -15,9 +15,6 @@
 		<p><img src="../templates/templatename/template_preview.png" /></p>
 		<h2>Module positions</h2>
 		<ol>
-			<li>header</li>
-			<li>menu</li>
-			<li>footer</li>
 			<li>debug</li>
 		</ol>
 		<p>Created by <a href="http://www.example.com" target="_blank">your name | example.com</a>.</p>
