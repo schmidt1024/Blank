@@ -19,6 +19,14 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
+-------------------- 1.2.2 [2012-08-22] -------------------
++ bootstrap-responsive.css
++ bootstrap.css
+- bootstrap-responsive.min.css
+- bootstrap.min.css
+^ template.css.php: change path to uncompress bootstrap files
+  | thx Volker Richardt
+
 -------------------- 1.2.1 [2012-08-14] -------------------
 ^ Update Twitter Bootstrap
   ^ bootstrap-responsive.min.css
