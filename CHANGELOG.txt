@@ -19,6 +19,9 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
+-------------------- 1.2.3 [2012-08-22] -------------------
+^ index.php: update get variable in css and js link
+
 -------------------- 1.2.2 [2012-08-22] -------------------
 + bootstrap-responsive.css
 + bootstrap.css
