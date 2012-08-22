@@ -24,6 +24,7 @@ $ -> Language fix or change
 + bootstrap.css
 - bootstrap-responsive.min.css
 - bootstrap.min.css
+^ bootstrap.css: change paths from /img/ to /images/
 ^ template.css.php: change path to uncompress bootstrap files
   | thx Volker Richardt
 
