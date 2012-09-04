@@ -20,6 +20,8 @@ $ -> Language fix or change
 ! -> Note
 
 -------------------- 1.2.3 [2012-08-22] -------------------
+^ template.css: delete obsolete body and html attributes
+^ templateDetails.xml: change default version to 1.0.0
 ^ index.php: update get variable in css and js link
 
 -------------------- 1.2.2 [2012-08-22] -------------------

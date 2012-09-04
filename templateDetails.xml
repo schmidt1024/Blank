@@ -9,7 +9,7 @@
 	<copyright>Copyright © xxxx example.com</copyright><!-- for who you are coding -->
 	<authorEmail>your.name@example.com</authorEmail><!-- your email address -->
 	<authorUrl>http://www.example.com</authorUrl><!-- your url -->
-	<version>1.2.0</version><!-- give your template a number -->
+	<version>1.0.0</version><!-- give your template a number -->
 	<description><![CDATA[ 
 		<h1>templatename</h1>
 		<p><img src="../templates/templatename/template_preview.png" /></p>
