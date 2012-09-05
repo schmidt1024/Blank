@@ -24,7 +24,7 @@ $this->setGenerator(null);
 
 // load sheets and scripts
 $doc->addStyleSheet($tpath.'/css/template.css.php?b='.$bootstrap.'&v=1'); 
-if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr.js'); // <- this script must be in the head
+if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js'); // <- this script must be in the head
 
 // unset scripts, put them into /js/template.js.php to minify http requests
 unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
