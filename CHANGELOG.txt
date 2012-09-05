@@ -20,6 +20,13 @@ $ -> Language fix or change
 ! -> Note
 
 -------------------- 1.2.4 [2012-09-05] -------------------
+^ Twitter Bootstrap 2.1.1 files
+  ^ bootstrap-responsive.css
+  ^ bootstrap.css: inkl. change path to image folder 
+  ^ glyphicons-halflings-white.png
+  ^ glyphicons-halflings.png
+  ^ bootstrap.js
+  ^ bootstrap.min.js
 + jquery-1.8.1.min.js
 + modernizr-2.6.2.js
 ^ template.js.php: implement jQuery 1.8.1
