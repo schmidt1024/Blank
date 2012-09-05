@@ -19,6 +19,14 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
+-------------------- 1.2.4 [2012-09-05] -------------------
++ jquery-1.8.1.min.js
++ modernizr-2.6.2.js
+^ template.js.php: implement jQuery 1.8.1
+^ index.php: implement Modernizr 2.6.2
+- jquery-1.8.0.min.js
+- modernizr.js
+
 -------------------- 1.2.3 [2012-09-04] -------------------
 ^ template.css: delete obsolete body and html attributes
 ^ templateDetails.xml: change default version to 1.0.0
