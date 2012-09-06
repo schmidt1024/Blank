@@ -15,8 +15,9 @@ Functions
 Addons
 ------
 
-* Modernizr (http://modernizr.com)
-* Twitter Bootstrap (http://twitter.github.com/bootstrap/)
-* PIE (http://css3pie.com)
+* Modernizr 2.6.2 (http://modernizr.com)
+* Twitter Bootstrap 2.1.1 (http://twitter.github.com/bootstrap/)
+* jQuery 1.8.1 (http://jquery.com)
+* PIE 1.0.0 (http://css3pie.com)
 
 [Getting Started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started)
