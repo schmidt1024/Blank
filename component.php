@@ -24,8 +24,8 @@ $this->setGenerator(null);
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/apple-touch-icon-72x72.png"> <!-- ipad -->
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/apple-touch-icon-114x114.png"> <!-- iphone retina -->
   <link href="<?php echo $tpath; ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /> <!-- favicon -->
-  <link rel="stylesheet" href="<?php echo $tpath; ?>/css/print.css?v=1.0.0" type="text/css" /> <!-- stylesheet -->
-  <script src="<?php echo $tpath; ?>/js/modernizr.js"></script> <!-- put all javascripts at the bottom, accept of modernizr.js -->
+  <link rel="stylesheet" href="<?php echo $tpath; ?>/css/print.css?v=1" type="text/css" /> <!-- stylesheet -->
+  <script src="<?php echo $tpath; ?>/js/modernizr.js"></script> <!-- modernizr -->
 </head>
 
 <body id="print">
@@ -33,11 +33,7 @@ $this->setGenerator(null);
     <jdoc:include type="message" />
     <jdoc:include type="component" />
   </div>
-  <?php
-    if ( 1== (int)JRequest::get('print') ) {
-      echo '<script type="text/javascript">window.print();</script>';
-    }
-  ?>
+  <?php if ($_GET['print'] == '1') echo '<script type="text/javascript">window.print();</script>'; ?>
 </body>
 
 </html>
