@@ -25,7 +25,8 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // load sheets and scripts
-$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$bootstrap.'&amp;c='.$compressor.'&amp;l='.$less.'&amp;v=1'); 
+$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$bootstrap.'&amp;c='.$compressor.'&amp;l='.$less.'&amp;v=1');
+$doc->addScript($tpath.'/js/template.js.php?b='.$bootstrap.'&amp;l='.$less.'&amp;v=1');
 if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js'); // <- this script must be in the head
 
 // unset scripts, put them into /js/template.js.php to minify http requests
@@ -54,7 +55,6 @@ if (isset($this->_script['text/javascript'])) {
   <link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/apple-touch-icon-57x57.png"> <!-- iphone, ipod, android -->
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/apple-touch-icon-72x72.png"> <!-- ipad -->
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/apple-touch-icon-114x114.png"> <!-- iphone retina -->
-  <script type="text/javascript" src="<?php echo $tpath.'/js/template.js.php?b='.$bootstrap.'&amp;l='.$less.'&amp;v=1'; ?>"></script>
   <?php if ($pie==1) : ?>
     <!--[if lte IE 8]>
       <style> 
