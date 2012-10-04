@@ -64,22 +64,8 @@
   				</field>
   				<field name="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DOC" type="spacer" hr="false" />
   				<field type="spacer" hr="true" />
-  		  <!-- CSS Compressor-->
-  				<field name="compressor" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_COMPRESSOR_LABEL" description="TPL_TEMPLATENAME_PARAMETER_COMPRESSOR_DESC">
-  					<option value="0">JNO</option>
-  					<option value="1">JYES</option>
-  				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_COMPRESSOR_DOC" type="spacer" hr="false" />
-  				<field type="spacer" hr="true" />
-				<!-- LESS-->
-  				<field name="less" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_LESS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_LESS_DESC">
-  					<option value="0">JNO</option>
-  					<option value="1">JYES</option>
-  				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_LESS_DOC" type="spacer" hr="false" />
-  				<field type="spacer" hr="true" />
 				<!-- PIE-->
-  				<field name="pie" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
+  				<field name="pie" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
   					<option value="0">JNO</option>
   					<option value="1">JYES</option>
   				</field>
