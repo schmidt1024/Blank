@@ -1,4 +1,4 @@
-/* TEMPLATE LESS
+/* TEMPLATE CSS
 *********************************************/
 html {
   overflow-y: scroll;
@@ -25,6 +25,10 @@ html {
 }
 /* Media Queries
 *********************************************/
+/* Retina */
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
+
+}
 /* Landscape phones and down */
 @media (max-width: 480px) {
   

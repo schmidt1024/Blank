@@ -55,6 +55,10 @@ $ -> Language fix or change
   + cases if compressor is enabled
   + cases if less is disabled
   ^ order of css loading; bootstrap files @first
+^ template.css
+  + Retina support via media queries
+^ template.less
+  + Retina support via media queries
 ^ reset.css: insert two empty lines at end
 
 -------------------- 1.2.5 [2012-09-22] -------------------
