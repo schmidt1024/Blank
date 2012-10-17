@@ -47,6 +47,9 @@ $ -> Language fix or change
 ^ offline.php
   ^ fix link to modernizr
   ^ change verion number in link to css
+^ error.php
+  ^ fix link to modernizr
+  ^ change verion number in link to css
 ^ template.js.php
   + get less variable
   + if less==1 load less javascript
