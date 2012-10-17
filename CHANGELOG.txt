@@ -44,6 +44,9 @@ $ -> Language fix or change
   + link to bootstrap-responsive file in case of less
   + link to extern html5 shim
   ^ script loading order after css (for less)
+^ offline.php
+  ^ fix link to modernizr
+  ^ change verion number in link to css
 ^ template.js.php
   + get less variable
   + if less==1 load less javascript

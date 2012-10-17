@@ -16,8 +16,8 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // load sheets and scripts
-$doc->addStyleSheet($tpath.'/css/offline.css?v=1.0.0'); 
-$doc->addScript($tpath.'/js/modernizr.js');
+$doc->addStyleSheet($tpath.'/css/offline.css?v=1'); 
+$doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 
 ?><!doctype html>
 <!--[if IEMobile]><html class="iemobile" lang="<?php echo $this->language; ?>"> <![endif]-->
