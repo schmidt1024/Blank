@@ -22,8 +22,15 @@ $ -> Language fix or change
 -------------------- 1.2.6 [2012-10-01] -------------------
 + less-1.3.0.min.js
 + template.less
-+ bootstrap-responsive.min.css
-+ bootstrap.min.css
+^ Twitter Bootstrap 2.2.1 files
+  + bootstrap.min.css
+  + bootstrap-responsive.min.css
+  ^ bootstrap-responsive.css
+  ^ bootstrap.css: inkl. change path to image folder
+  ^ glyphicons-halflings-white.png
+  ^ glyphicons-halflings.png
+  ^ bootstrap.js
+  ^ bootstrap.min.js
 ^ templateDetails.xml
   + css compressor parameter
   + less parameter
