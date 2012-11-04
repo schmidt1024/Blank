@@ -23,7 +23,7 @@ $less = $_GET['l'];
 
 if ($bootstrap==1) require('jquery-1.8.2.min.js');
 if ($bootstrap==1) require('bootstrap.min.js');
-if ($less==1) require('less-1.3.0.min.js');
+if ($less==1) require('less-1.3.1.min.js');
 
 require('../../../media/system/js/mootools-core.js');
 require('../../../media/system/js/core.js');
