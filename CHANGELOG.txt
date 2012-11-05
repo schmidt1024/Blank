@@ -25,7 +25,7 @@ $ -> Language fix or change
 + template.less
 + normalize.css
 + es-ES.tpl_templatename.ini
-^ Twitter Bootstrap 2.2.1 files
+^ Bootstrap 2.2.1 files
   + bootstrap.min.css
   + bootstrap-responsive.min.css
   ^ bootstrap-responsive.css
@@ -37,11 +37,13 @@ $ -> Language fix or change
 ^ templateDetails.xml
   + css compressor parameter
   + less parameter
+  + less usage parameter
   + fieldset advanced with 4 disable headload parameter
   ^ pie parameter default 0
 ^ de-DE.tpl_templatename.ini
   + css compressor parameter text
   + less parameter text
+  + less usage parameter text
   + disable headload parameter text
   - all documentation text
   - all hr
@@ -55,7 +57,8 @@ $ -> Language fix or change
   + disable headload plugin | thx rdeutz
   + get compressor parameter
   + get less parameter
-  + if less==1 load less javascript
+  + get less usage parameter
+  + less loading method
   + prepare css path with compressor parameter value
   + prepare js and css path with less parameter value
   + unset caption js snippet in head

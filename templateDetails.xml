@@ -70,6 +70,10 @@
   					<option value="0">JNO</option>
   					<option value="1">JYES</option>
   				</field>
+  				<field name="lessusage" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_LESSUSAGE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_LESSUSAGE_DESC">
+  					<option value="0">TPL_TEMPLATENAME_PARAMETER_LESSUSAGE_CLIENT</option>
+  					<option value="1">TPL_TEMPLATENAME_PARAMETER_LESSUSAGE_SERVER</option>
+  				</field>
 			<!-- PIE-->
   				<field name="pie" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
   					<option value="0">JNO</option>

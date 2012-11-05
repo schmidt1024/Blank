@@ -8,11 +8,12 @@
 
 defined( '_JEXEC' ) or die; 
 
-// parameters (template)
+// parameter
 $modernizr = $this->params->get('modernizr');
 $bootstrap = $this->params->get('bootstrap');
 $compressor = $this->params->get('compressor');
 $less = $this->params->get('less');
+$lessusage = $this->params->get('lessusage');
 $pie = $this->params->get('pie');
 
 // variables
@@ -20,64 +21,27 @@ $app = JFactory::getApplication();
 $doc = JFactory::getDocument(); 
 $params = $app->getParams();
 $headdata = $doc->getHeadData();
-$pageclass = $params->get('pageclass_sfx'); // parameter (menu entry)
+$pageclass = $params->get('pageclass_sfx');
 $tpath = $this->baseurl.'/templates/'.$this->template;
 
 // remove generator tag
 $this->setGenerator(null);
 
 // disable head load
-if ($app->isSite()) {
-  // disable js
-  if ( $this->params->get('disablejs') ) {
-    $fnjs=$this->params->get('fnjs');
-    if (trim($fnjs) != '') {
-      $filesjs=explode(',', $fnjs);
-      $head = (array) $headdata['scripts'];
-      $newhead = array();         
-      foreach($head as $key => $elm) {
-        $add = true;
-        foreach ($filesjs as $dis) {
-          if (strpos($key,$dis) !== false) {
-            $add=false;
-            break;
-          } 
-        }
-        if ($add) $newhead[$key] = $elm;
-      }
-      $headdata['scripts'] = $newhead;
-    } 
-  } 
-  // disable css
-  if ( $this->params->get('disablecss') ) {
-    $fncss=$this->params->get('fncss');
-    if (trim($fncss) != '') {
-      $filescss=explode(',', $fncss);
-      $head = (array) $headdata['styleSheets'];
-      $newhead = array();         
-      foreach($head as $key => $elm) {
-        $add = true;
-        foreach ($filescss as $dis) {
-          if (strpos($key,$dis) !== false) {
-            $add=false;
-            break;
-          } 
-        }
-        if ($add) $newhead[$key] = $elm;
-      }
-      $headdata['styleSheets'] = $newhead;
-    } 
-  }
-  $doc->setHeadData($headdata); 
-}
+require('headload.php');
 
-// load template css and js
-$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$bootstrap.'&amp;c='.$compressor.'&amp;l='.$less.'&amp;v=1');
+// add template js
 if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 if ($bootstrap==1) $doc->addScript($tpath.'/js/jquery-1.8.2.min.js');
 if ($bootstrap==1) $doc->addScript($tpath.'/js/jquery-noconflict.js');
 if ($bootstrap==1) $doc->addScript($tpath.'/js/bootstrap.min.js');
-if ($less==1) $doc->addScript($tpath.'/js/less-1.3.1.min.js');
+
+// add template less/css
+if ($less==1 && $bootstrap==1) $doc->addStyleSheet($tpath.'/css/bootstrap.min.css');
+if ($less==1 && $bootstrap==1) $doc->addStyleSheet($tpath.'/css/bootstrap-responsive.min.css');
+if ($less==1) $doc->addCustomTag('<link rel="stylesheet/less" href="'.$tpath.'/css/template.less">');
+if ($less==1 && $lessusage==0) $doc->addCustomTag('<script src="'.$tpath.'/js/less-1.3.1.min.js" type="text/javascript"></script>');
+if ($less==0) $doc->addStyleSheet($tpath.'/css/template.css.php?b='.$bootstrap.'&amp;c='.$compressor.'&amp;v=1');
 
 ?><!doctype html>
 <!--[if IEMobile]><html class="iemobile" lang="<?php echo $this->language; ?>"> <![endif]-->
@@ -87,12 +51,10 @@ if ($less==1) $doc->addScript($tpath.'/js/less-1.3.1.min.js');
 
 <head>
   <jdoc:include type="head" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> <!-- mobile viewport -->
-  <?php if ($less==1) : ?><link rel="stylesheet/less" type="text/css" href="<?php echo $tpath; ?>/css/template.less"><?php endif; ?>
-  <?php if ($less==1 && $bootstrap==1) : ?><link rel="stylesheet/css" type="text/css" href="<?php echo $tpath; ?>/css/bootstrap-responsive.min.css"><?php endif; ?>
-  <link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/apple-touch-icon-57x57.png"> <!-- iphone, ipod, android -->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/apple-touch-icon-72x72.png"> <!-- ipad -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/apple-touch-icon-114x114.png"> <!-- iphone retina -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/apple-touch-icon-114x114.png">
   <!--[if lte IE 8]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <?php if ($pie==1) : ?>
