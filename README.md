@@ -1,16 +1,17 @@
-Blank Template
-==============
+Blank Template 1.3.0
+====================
 
-Start your own template project for Joomla! 2.5 today!
+Light, powerful and free template for Joomla!
+for faster and easier web development.
 
 Functions
 ---------
 
 * Full functional Joomla template
-* Start from scratch with the css reset sheet
+* Start from scratch with the normalize.css
 * Support tablets, phones and even IE7
 * Customisable error, offline and print page
-* Advanced properties (html5, css3, ...)
+* Advanced properties (compressor, html5, css3, ...)
 
 Addons
 ------

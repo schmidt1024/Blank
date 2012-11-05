@@ -19,9 +19,12 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
--------------------- 1.2.6 [2012-10-01] -------------------
+-------------------- 1.3.0 [2012-11-05] -------------------
 + less-1.3.1.min.js
++ jquery-noconflict.js
 + template.less
++ normalize.css
++ es-ES.tpl_templatename.ini
 ^ Twitter Bootstrap 2.2.1 files
   + bootstrap.min.css
   + bootstrap-responsive.min.css
@@ -34,32 +37,45 @@ $ -> Language fix or change
 ^ templateDetails.xml
   + css compressor parameter
   + less parameter
+  + fieldset advanced with 4 disable headload parameter
   ^ pie parameter default 0
 ^ de-DE.tpl_templatename.ini
   + css compressor parameter text
   + less parameter text
+  + disable headload parameter text
+  - all documentation text
+  - all hr
 ^ en-GB.tpl_templatename.ini
   + css compressor parameter text
   + less parameter text
+  + disable headload parameter text
+  - all documentation text
+  - all hr
 ^ index.php
+  + disable headload plugin | thx rdeutz
   + get compressor parameter
   + get less parameter
+  + if less==1 load less javascript
   + prepare css path with compressor parameter value
   + prepare js and css path with less parameter value
   + unset caption js snippet in head
   + link to less file
   + link to bootstrap-responsive file in case of less
   + link to extern html5 shim
+  + addScript jquery-1.8.2.min.js
+  + addScript jquery-noconflict.js
+  + addScript bootstrap.min.js
+  + addScript less-1.3.1.min.js
   ^ script loading order after css (for less)
+  - addScript template.js.php
+  - remove all lines to unset scripts
+  - remove to unset ugly caption js snippet
 ^ offline.php
   ^ fix link to modernizr
   ^ change verion number in link to css
 ^ error.php
   ^ fix link to modernizr
   ^ change verion number in link to css
-^ template.js.php
-  + get less variable
-  + if less==1 load less javascript
 ^ template.css.php
   + get compressor variable
   + get less variable
@@ -73,6 +89,10 @@ $ -> Language fix or change
 ^ template.less
   + Retina support via media queries
 ^ reset.css: insert two empty lines at end
+- template.js.php
+- PIE.php
+- PIE.js
+- reset.css
 
 -------------------- 1.2.5 [2012-09-22] -------------------
 + jquery-1.8.2.min.js

@@ -19,27 +19,65 @@ $pie = $this->params->get('pie');
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument(); 
 $params = $app->getParams();
+$headdata = $doc->getHeadData();
 $pageclass = $params->get('pageclass_sfx'); // parameter (menu entry)
 $tpath = $this->baseurl.'/templates/'.$this->template;
 
+// remove generator tag
 $this->setGenerator(null);
 
-// load sheets and scripts
-$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$bootstrap.'&amp;c='.$compressor.'&amp;l='.$less.'&amp;v=1');
-$doc->addScript($tpath.'/js/template.js.php?b='.$bootstrap.'&amp;l='.$less.'&amp;v=1');
-if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js'); // <- this script must be in the head
-
-// unset scripts, put them into /js/template.js.php to minify http requests
-unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
-unset($doc->_scripts[$this->baseurl.'/media/system/js/core.js']);
-unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
-
-// unset ugly caption js snippet in head
-if (isset($this->_script['text/javascript'])) { 
-  $this->_script['text/javascript'] = preg_replace('%window\.addEvent\(\'load\',\s*function\(\)\s*{\s*new\s*JCaption\(\'img.caption\'\);\s*}\);\s*%', '', $this->_script['text/javascript']);
-  if (empty($this->_script['text/javascript']))
-      unset($this->_script['text/javascript']);
+// disable head load
+if ($app->isSite()) {
+  // disable js
+  if ( $this->params->get('disablejs') ) {
+    $fnjs=$this->params->get('fnjs');
+    if (trim($fnjs) != '') {
+      $filesjs=explode(',', $fnjs);
+      $head = (array) $headdata['scripts'];
+      $newhead = array();         
+      foreach($head as $key => $elm) {
+        $add = true;
+        foreach ($filesjs as $dis) {
+          if (strpos($key,$dis) !== false) {
+            $add=false;
+            break;
+          } 
+        }
+        if ($add) $newhead[$key] = $elm;
+      }
+      $headdata['scripts'] = $newhead;
+    } 
+  } 
+  // disable css
+  if ( $this->params->get('disablecss') ) {
+    $fncss=$this->params->get('fncss');
+    if (trim($fncss) != '') {
+      $filescss=explode(',', $fncss);
+      $head = (array) $headdata['styleSheets'];
+      $newhead = array();         
+      foreach($head as $key => $elm) {
+        $add = true;
+        foreach ($filescss as $dis) {
+          if (strpos($key,$dis) !== false) {
+            $add=false;
+            break;
+          } 
+        }
+        if ($add) $newhead[$key] = $elm;
+      }
+      $headdata['styleSheets'] = $newhead;
+    } 
+  }
+  $doc->setHeadData($headdata); 
 }
+
+// load template css and js
+$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$bootstrap.'&amp;c='.$compressor.'&amp;l='.$less.'&amp;v=1');
+if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
+if ($bootstrap==1) $doc->addScript($tpath.'/js/jquery-1.8.2.min.js');
+if ($bootstrap==1) $doc->addScript($tpath.'/js/jquery-noconflict.js');
+if ($bootstrap==1) $doc->addScript($tpath.'/js/bootstrap.min.js');
+if ($less==1) $doc->addScript($tpath.'/js/less-1.3.1.min.js');
 
 ?><!doctype html>
 <!--[if IEMobile]><html class="iemobile" lang="<?php echo $this->language; ?>"> <![endif]-->

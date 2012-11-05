@@ -53,7 +53,7 @@ if ($bootstrap==1 && $compressor==1) require('bootstrap.css');
 if ($bootstrap==1 && $compressor==0) require('bootstrap.min.css');
 if ($less==0 && $bootstrap==1 && $compressor==1) require('bootstrap-responsive.css');
 if ($less==0 && $bootstrap==1 && $compressor==0) require('bootstrap-responsive.min.css');
-if ($bootstrap==0) require('reset.css');
+if ($bootstrap==0) require('normalize.css');
 if ($less==0) require('template.css');
 
 require('../../../media/system/css/system.css');

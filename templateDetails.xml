@@ -50,40 +50,47 @@
 	<config><!-- no need to change -->
 		<fields name="params">
 			<fieldset name="basic">
-			  <!-- MODERNIZR-->
-  			  <field name="modernizr" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_LABEL" description="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DESC">
-  					<option value="0">JNO</option>
-  					<option value="1">JYES</option>
-  				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DOC" type="spacer" hr="false" />
-  				<field type="spacer" hr="true" />
-		    <!-- TWITTER BOOTSTRAP-->
-  		    <field name="bootstrap" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_LABEL" description="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DESC">
-  					<option value="0">JNO</option>
-  					<option value="1">JYES</option>
-  				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DOC" type="spacer" hr="false" />
-  				<field type="spacer" hr="true" />
-  		  <!-- CSS Compressor-->
+			<!-- CSS Compressor-->
   				<field name="compressor" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_COMPRESSOR_LABEL" description="TPL_TEMPLATENAME_PARAMETER_COMPRESSOR_DESC">
   					<option value="0">JNO</option>
   					<option value="1">JYES</option>
   				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_COMPRESSOR_DOC" type="spacer" hr="false" />
-  				<field type="spacer" hr="true" />
-				<!-- LESS-->
+			<!-- MODERNIZR-->
+				<field name="modernizr" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_LABEL" description="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DESC">
+					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+		    <!-- BOOTSTRAP-->
+  		    	<field name="bootstrap" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_LABEL" description="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DESC">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+			<!-- LESS-->
   				<field name="less" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_LESS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_LESS_DESC">
   					<option value="0">JNO</option>
   					<option value="1">JYES</option>
   				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_LESS_DOC" type="spacer" hr="false" />
-  				<field type="spacer" hr="true" />
-				<!-- PIE-->
+			<!-- PIE-->
   				<field name="pie" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
   					<option value="0">JNO</option>
   					<option value="1">JYES</option>
   				</field>
-  				<field name="TPL_TEMPLATENAME_PARAMETER_PIE_DOC" type="spacer" hr="false" />
+			</fieldset>
+			<fieldset name="advanced">
+			<!-- Disable JavaScript -->	
+				<field name="disablejs" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_DISABLEJS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_DISABLEJS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<!-- JavaScript Files -->
+				<field name="fnjs" type="textarea" label="TPL_TEMPLATENAME_PARAMETER_FNJS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_FNJS_LABEL" cols="30" default="mootools-core.js,caption.js" rows="4" />
+			<!-- Disable CSS -->
+				<field name="disablecss" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_DISABLECSS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_DISABLECSS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>	
+				</field>
+			<!-- CSS Files -->
+				<field name="fncss" type="textarea" label="TPL_TEMPLATENAME_PARAMETER_FNCSS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_FNCSS_DESC" cols="30" rows="4" />
 			</fieldset>
 		</fields>
 	</config>
