@@ -3,15 +3,16 @@ Blank Template 1.3.0
 
 Light, powerful and free template for Joomla!
 for faster and easier web development.
+[Demo](http://d.blank.vc)
 
 Functions
 ---------
 
 * Full functional Joomla template
-* Start from scratch with the normalize.css
+* Start from scratch with normalize.css
 * Support tablets, phones and even IE7
 * Customisable error, offline and print page
-* Advanced properties (compressor, html5, css3, ...)
+* Advanced properties (compressor, headload, html5, css3, ...)
 
 Addons
 ------
