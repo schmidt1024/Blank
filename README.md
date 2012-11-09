@@ -2,7 +2,11 @@
 
 Light, powerful and free template for Joomla!
 for faster and easier web development.
-[Demo](http://d.blank.vc)
+
+
+## Demo
+
+Look at http://d.blank.vc to see the source. Keep in mind it's only a blank white page.
 
 ## Functions
 
@@ -20,9 +24,9 @@ for faster and easier web development.
 * [{less}](http://lesscss.org/)
 * [PIE](http://css3pie.com)
 
-## [Getting Started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started)
+## Get Started
 
-Read the wiki to get started.
+Read the [wiki to get started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started).
 
 ## Documentation
 
