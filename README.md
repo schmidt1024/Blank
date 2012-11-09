@@ -1,4 +1,4 @@
-# Blank Template 1.3.0
+# [Blank Template](http://blank.vc)
 
 Light, powerful and free template for Joomla!
 for faster and easier web development.
@@ -14,10 +14,16 @@ for faster and easier web development.
 
 ## Addons 
 
-* Modernizr 2.6.2 (http://modernizr.com)
-* Bootstrap 2.2.1 (http://getbootstrap.com)
-* jQuery 1.8.2 (http://jquery.com)
-* {less} 1.3.1 (http://lesscss.org/)
-* PIE 1.0.0 (http://css3pie.com)
+* [Modernizr](http://modernizr.com)
+* [Bootstrap](http://getbootstrap.com)
+* [jQuery](http://jquery.com)
+* [{less}](http://lesscss.org/)
+* [PIE](http://css3pie.com)
 
-[Getting Started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started)
+## [Getting Started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started)
+
+Read the wiki to get started.
+
+## Documentation
+
+Beginn to understand the whole template and read the [ebook](http://blank.vc/ebook.html).
