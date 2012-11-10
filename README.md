@@ -19,9 +19,8 @@ Look at http://d.blank.vc to see the source. Keep in mind it's only a blank whit
 ## Addons 
 
 * [Modernizr](http://modernizr.com)
-* [Bootstrap](http://getbootstrap.com)
-* [jQuery](http://jquery.com)
-* [{less}](http://lesscss.org/)
+* [Bootstrap](http://getbootstrap.com) &amp; [jQuery](http://jquery.com)
+* [{less}](http://lesscss.org/) &amp; [sass](http://sass-lang.com/)
 * [PIE](http://css3pie.com)
 
 ## Get Started

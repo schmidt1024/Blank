@@ -19,12 +19,12 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
--------------------- 1.3.0 [2012-11-05] -------------------
-+ less-1.3.1.min.js
+-------------------- 1.3.0 [2012-11-10] -------------------
++ head.php
 + jquery-noconflict.js
-+ template.less
 + normalize.css
-+ es-ES.tpl_templatename.ini
++ template.less
++ template.scss
 + apple-touch-icon-57x57-precomposed.png
 + apple-touch-icon-72x72-precomposed.png
 + apple-touch-icon-114x114-precomposed.png
@@ -41,65 +41,45 @@ $ -> Language fix or change
   ^ bootstrap.js
   ^ bootstrap.min.js
 ^ templateDetails.xml
-  + css compressor parameter
-  + less parameter
-  + less usage parameter
+  + css folders for default, less, minified and sass
+  + language es-ES.tpl_templatename.ini
+  + css method parameter
   + fieldset advanced with 4 disable headload parameter
   ^ pie parameter default 0
-^ de-DE.tpl_templatename.ini
-  + css compressor parameter text
-  + less parameter text
-  + less usage parameter text
-  + disable headload parameter text
-  - all documentation text
-  - all hr
-^ en-GB.tpl_templatename.ini
-  + css compressor parameter text
-  + less parameter text
-  + disable headload parameter text
+  - filename for apple icons
+^ de-DE.tpl_templatename.ini & ^ en-GB.tpl_templatename.ini
+  + css method parameter
+  + disable headload parameter
   - all documentation text
   - all hr
 ^ index.php
-  + disable headload plugin | thx rdeutz
-  + get compressor parameter
-  + get less parameter
-  + get less usage parameter
-  + less loading method
-  + prepare css path with compressor parameter value
-  + prepare js and css path with less parameter value
-  + unset caption js snippet in head
-  + link to less file
-  + link to bootstrap-responsive file in case of less
-  + link to extern html5 shim
+  + headload plugin | thx rdeutz
+    require('head.php');
+  + get cssmethod parameter
+  + js loading method (incl. bootstrap framework for J!>3)
   + addScript jquery-1.8.2.min.js
   + addScript jquery-noconflict.js
   + addScript bootstrap.min.js
-  + addScript less-1.3.1.min.js
-  + add link to apple-touch-icon-144x144-precomposed.png
-  ^ add suffix -precomposed to apple touch icon files
-  ^ script loading order after css (for less)
+  + addStyleSheet normalize.css
+  + addStyleSheet bootstrap.min.css
+  + addStyleSheet bootstrap-responsive.min.css
+  + css loading method (default, less, minified, sass)
+  + link to extern html5 shim
+  ^ fix links to apple touch icons
   - addScript template.js.php
   - remove all lines to unset scripts
   - remove to unset ugly caption js snippet
-^ offline.php
+^ offline.php & ^ error.php
+  + version number in link to css
+  ^ fix link to css
   ^ fix link to modernizr
-  ^ change verion number in link to css
-^ error.php
-  ^ fix link to modernizr
-  ^ change verion number in link to css
+  ^ fix links to apple touch icons
 ^ template.css.php
-  + get compressor variable
-  + get less variable
-  + cases if bootstrap is enabled
-  + cases if compressor is disabled
-  + cases if compressor is enabled
-  + cases if less is disabled
-  ^ order of css loading; bootstrap files @first
+  - parameter queries
+  - bootstrap files
+  - reset.css 
 ^ template.css
   + Retina support via media queries
-^ template.less
-  + Retina support via media queries
-^ reset.css: insert two empty lines at end
 - template.js.php
 - PIE.php
 - PIE.js

@@ -6,18 +6,10 @@
 # Website   http://www.example.com
 -------------------------------------------------------------------------*/
 
-// parameter
-$bootstrap = $_GET['b'];
-$compressor = $_GET['c'];
-$less = $_GET['l'];
-
-if ($compressor==1) {
-  //initialize ob_gzhandler to send and compress data
-  ob_start ("ob_gzhandler");
-  //initialize compress function for whitespace removal
-  ob_start("compress");
-} 
-
+//initialize ob_gzhandler to send and compress data
+ob_start ("ob_gzhandler");
+//initialize compress function for whitespace removal
+ob_start("compress");
 //required header info and character set
 header("Content-type:text/css; charset=UTF-8");
 //cache control to process
@@ -49,14 +41,8 @@ function compress($buffer) {
 	return $buffer;
 }
 
-if ($bootstrap==1 && $compressor==1) require('bootstrap.css');
-if ($bootstrap==1 && $compressor==0) require('bootstrap.min.css');
-if ($less==0 && $bootstrap==1 && $compressor==1) require('bootstrap-responsive.css');
-if ($less==0 && $bootstrap==1 && $compressor==0) require('bootstrap-responsive.min.css');
-if ($bootstrap==0) require('normalize.css');
-if ($less==0) require('template.css');
-
-require('../../../media/system/css/system.css');
-require('../../system/css/system.css');
-require('../../system/css/general.css');
+require('../default/template.css');
+require('../../../../media/system/css/system.css');
+require('../../../system/css/system.css');
+require('../../../system/css/general.css');
 ?>

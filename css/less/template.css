@@ -1,7 +1,10 @@
-/* TEMPLATE CSS
+/* TEMPLATE LESS
 *********************************************/
 html {
   overflow-y: scroll;
+}
+body {
+  background-color: #4d926f;
 }
 /* LAYOUT
 *********************************************/
@@ -27,7 +30,7 @@ html {
 *********************************************/
 /* Retina */
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
-
+  
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {

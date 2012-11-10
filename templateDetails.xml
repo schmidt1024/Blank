@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 
-<extension version="2.5" type="template" method="upgrade">
+<extension version="2.5" type="template" client="site" method="upgrade">
 	
 	<name>templatename</name><!-- name the template -->
 	<creationDate>xxxx-xx-xx</creationDate><!-- the date your are beginn to code -->
@@ -25,16 +25,14 @@
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>js</folder>
-		<filename>apple-touch-icon-57x57.png</filename>
-		<filename>apple-touch-icon-72x72.png</filename>
-		<filename>apple-touch-icon-114x114.png</filename>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
-		<filename>favicon.ico</filename>
+		<filename>head.php</filename>
 		<filename>index.php</filename>
 		<filename>offline.php</filename>
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
 	
@@ -50,51 +48,72 @@
 	<config><!-- no need to change -->
 		<fields name="params">
 			<fieldset name="basic">
-			<!-- CSS Compressor-->
-  				<field name="compressor" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_COMPRESSOR_LABEL" description="TPL_TEMPLATENAME_PARAMETER_COMPRESSOR_DESC">
-  					<option value="0">JNO</option>
-  					<option value="1">JYES</option>
-  				</field>
+
 			<!-- MODERNIZR-->
-				<field name="modernizr" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_LABEL" description="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DESC">
-					<option value="0">JNO</option>
-  					<option value="1">JYES</option>
-  				</field>
-		    <!-- BOOTSTRAP-->
-  		    	<field name="bootstrap" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_LABEL" description="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DESC">
-  					<option value="0">JNO</option>
-  					<option value="1">JYES</option>
-  				</field>
-			<!-- LESS-->
-  				<field name="less" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_LESS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_LESS_DESC">
-  					<option value="0">JNO</option>
-  					<option value="1">JYES</option>
-  				</field>
-  				<field name="lessusage" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_LESSUSAGE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_LESSUSAGE_DESC">
-  					<option value="0">TPL_TEMPLATENAME_PARAMETER_LESSUSAGE_CLIENT</option>
-  					<option value="1">TPL_TEMPLATENAME_PARAMETER_LESSUSAGE_SERVER</option>
-  				</field>
+			<field name="modernizr" type="radio" default="0" 
+				label="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_LABEL" 
+				description="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<!-- CSS METHOD -->
+			<field name="cssmethod" type="radio" default="default" 
+				label="TPL_TEMPLATENAME_PARAMETER_CSSMETHOD_LABEL" 
+				description="">
+				<option value="default">CSS (default)</option>
+				<option value="minified">CSS (minified)</option>
+				<option value="less">LESS</option>
+				<option value="sass">SASS</option>
+			</field>
+
+			<!-- BOOTSTRAP-->
+			<field name="bootstrap" type="radio" default="0" 
+				label="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_LABEL" 
+				description="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
 			<!-- PIE-->
-  				<field name="pie" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
-  					<option value="0">JNO</option>
-  					<option value="1">JYES</option>
-  				</field>
+			<field name="pie" type="radio" default="0" 
+				label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" 
+				description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
 			</fieldset>
 			<fieldset name="advanced">
+
 			<!-- Disable JavaScript -->	
-				<field name="disablejs" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_DISABLEJS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_DISABLEJS_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
+			<field name="disablejs" type="radio" default="0" 
+				label="TPL_TEMPLATENAME_PARAMETER_DISABLEJS_LABEL" 
+				description="TPL_TEMPLATENAME_PARAMETER_DISABLEJS_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
 			<!-- JavaScript Files -->
-				<field name="fnjs" type="textarea" label="TPL_TEMPLATENAME_PARAMETER_FNJS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_FNJS_LABEL" cols="30" default="mootools-core.js,caption.js" rows="4" />
+			<field name="fnjs" type="textarea" 
+				label="TPL_TEMPLATENAME_PARAMETER_FNJS_LABEL" 
+				description="TPL_TEMPLATENAME_PARAMETER_FNJS_LABEL" 
+				cols="30" default="mootools-core.js,caption.js" rows="4" />
+
 			<!-- Disable CSS -->
-				<field name="disablecss" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_DISABLECSS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_DISABLECSS_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>	
-				</field>
+			<field name="disablecss" type="radio" default="0" 
+				label="TPL_TEMPLATENAME_PARAMETER_DISABLECSS_LABEL" 
+				description="TPL_TEMPLATENAME_PARAMETER_DISABLECSS_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>	
+			</field>
+
 			<!-- CSS Files -->
-				<field name="fncss" type="textarea" label="TPL_TEMPLATENAME_PARAMETER_FNCSS_LABEL" description="TPL_TEMPLATENAME_PARAMETER_FNCSS_DESC" cols="30" rows="4" />
+			<field name="fncss" type="textarea" 
+				label="TPL_TEMPLATENAME_PARAMETER_FNCSS_LABEL" 
+				description="TPL_TEMPLATENAME_PARAMETER_FNCSS_DESC" 
+				cols="30" rows="4" />
+
 			</fieldset>
 		</fields>
 	</config>
