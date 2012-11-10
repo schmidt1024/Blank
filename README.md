@@ -20,7 +20,7 @@ Look at http://d.blank.vc to see the source. Keep in mind it's only a blank whit
 
 * [Modernizr](http://modernizr.com)
 * [Bootstrap](http://getbootstrap.com) &amp; [jQuery](http://jquery.com)
-* [{less}](http://lesscss.org/) &amp; [sass](http://sass-lang.com/)
+* [LESS](http://lesscss.org/) &amp; [SASS](http://sass-lang.com/)
 * [PIE](http://css3pie.com)
 
 ## Get Started
