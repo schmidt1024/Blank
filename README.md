@@ -10,7 +10,6 @@ Look at http://d.blank.vc to see the source. Keep in mind it's only a blank whit
 
 ## Functions
 
-* Full functional Joomla template
 * Start from scratch with normalize.css
 * Support tablets, phones and even IE7
 * Customisable error, offline and print page
