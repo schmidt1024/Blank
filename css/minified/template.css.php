@@ -6,6 +6,8 @@
 # Website   http://www.example.com
 -------------------------------------------------------------------------*/
 
+$bootstrap = $_GET['b'];
+
 //initialize ob_gzhandler to send and compress data
 ob_start ("ob_gzhandler");
 //initialize compress function for whitespace removal
@@ -40,6 +42,10 @@ function compress($buffer) {
 	
 	return $buffer;
 }
+
+if ($bootstrap==0) require('../default/normalize.css');
+if ($bootstrap==1) require('../default/bootstrap.min.css');
+if ($bootstrap==1) require('../default/bootstrap-responsive.min.css');
 
 require('../default/template.css');
 require('../../../../media/system/css/system.css');

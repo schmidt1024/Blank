@@ -23,14 +23,23 @@ $ -> Language fix or change
 + head.php
 + jquery-noconflict.js
 + normalize.css
-+ template.less
++ less
+  + normalize.less
+  + bootstrap.less
+  + bootstrap-responsive.less
+  + template.less
 + template.scss
-+ apple-touch-icon-57x57-precomposed.png
-+ apple-touch-icon-72x72-precomposed.png
-+ apple-touch-icon-114x114-precomposed.png
-+ apple-touch-icon-144x144-precomposed.png
-+ apple-touch-icon-precomposed.png
-+ apple-touch-icon.png
+  + normalize.scss
+  + bootstrap.scss
+  + bootstrap-responsive.scss
+  + template.scss
++ images
+  + apple-touch-icon-57x57-precomposed.png
+  + apple-touch-icon-72x72-precomposed.png
+  + apple-touch-icon-114x114-precomposed.png
+  + apple-touch-icon-144x144-precomposed.png
+  + apple-touch-icon-precomposed.png
+  + apple-touch-icon.png
 ^ Bootstrap 2.2.1 files
   + bootstrap.min.css
   + bootstrap-responsive.min.css
