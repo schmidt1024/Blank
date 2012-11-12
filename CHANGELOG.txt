@@ -33,13 +33,23 @@ $ -> Language fix or change
   + bootstrap.scss
   + bootstrap-responsive.scss
   + template.scss
-+ images
+^ images
   + apple-touch-icon-57x57-precomposed.png
   + apple-touch-icon-72x72-precomposed.png
   + apple-touch-icon-114x114-precomposed.png
   + apple-touch-icon-144x144-precomposed.png
   + apple-touch-icon-precomposed.png
   + apple-touch-icon.png
+  ^ system images
+^ psd
+  + App Icon Template [2.0].atn
+  + App Icon Template [2.0].psd
+  - apple-touch-icon-57x57.psd
+  - apple-touch-icon-72x72.psd
+  - apple-touch-icon-114x114.psd
+  - arrow.psd
+  - email-print-button.psd
+  - favicon.psd
 ^ Bootstrap 2.2.1 files
   + bootstrap.min.css
   + bootstrap-responsive.min.css
@@ -96,6 +106,7 @@ $ -> Language fix or change
 - apple-touch-icon-57x57.png
 - apple-touch-icon-72x72.png
 - apple-touch-icon-114x114.png
+
 
 -------------------- 1.2.5 [2012-09-22] -------------------
 + jquery-1.8.2.min.js
