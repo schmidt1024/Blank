@@ -37,11 +37,11 @@ else :
 endif;
 
 // add css
-if ($bootstrap==0) $doc->addStyleSheet($tpath.'/css/default/normalize.css');
-if ($bootstrap==1) $doc->addStyleSheet($tpath.'/css/default/bootstrap.min.css');
-if ($bootstrap==1) $doc->addStyleSheet($tpath.'/css/default/bootstrap-responsive.min.css');
+if ($bootstrap==0 && $cssmethod=='default') $doc->addStyleSheet($tpath.'/css/default/normalize.css');
+if ($bootstrap==1 && $cssmethod=='default') $doc->addStyleSheet($tpath.'/css/default/bootstrap.min.css');
+if ($bootstrap==1 && $cssmethod=='default') $doc->addStyleSheet($tpath.'/css/default/bootstrap-responsive.min.css');
 if ($cssmethod=='minified') $ext='.php';
-$doc->addStyleSheet($tpath.'/css/'.$cssmethod.'/template.css'.$ext.'?v=1');
+$doc->addStyleSheet($tpath.'/css/'.$cssmethod.'/template.css'.$ext.'?b='.$bootstrap.'&amp;v=1');
 
 ?><!doctype html>
 <!--[if IEMobile]><html class="iemobile" lang="<?php echo $this->language; ?>"> <![endif]-->

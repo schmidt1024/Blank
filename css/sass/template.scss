@@ -1,8 +1,14 @@
+// normalize
 @import 'normalize.scss';
+
+// bootstrap
 @import 'bootstrap.scss';
 @import 'bootstrap-responsive.scss';
 
-$color: #4D926E;
+// colors
+$white: #FFFFFF;
+
+
 
 /* TEMPLATE SASS
 *********************************************/
@@ -10,10 +16,17 @@ html {
   overflow-y: scroll;
 }
 body {
-	background-color:$color;
+	background-color:$white;
 }
 
+
+
 /* LAYOUT
+*********************************************/
+
+
+
+/* HELPER
 *********************************************/
 /* Floats */
 .float-left {
@@ -33,6 +46,8 @@ body {
 .ie7 .group {
   zoom: 1;
 }
+
+
 
 /* Media Queries
 *********************************************/
