@@ -32,7 +32,6 @@ $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/images/apple-touch-icon-72x72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
-  <link href="<?php echo $tpath; ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /> <!-- favicon -->
 </head>
 
 <body>
@@ -41,6 +40,9 @@ $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
     <?php if ($app->getCfg('offline_image')) : ?>
       <img src="<?php echo $app->getCfg('offline_image'); ?>" alt="<?php echo $app->getCfg('sitename'); ?>" />
     <?php endif; ?>
+    <h1>
+      <?php echo htmlspecialchars($app->getCfg('sitename')); ?>
+    </h1>
     <?php if ($app->getCfg('display_offline_message', 1) == 1 && str_replace(' ', '', $app->getCfg('offline_message')) != ''): ?>
 		<p><?php echo $app->getCfg('offline_message'); ?></p>
     <?php elseif ($app->getCfg('display_offline_message', 1) == 2 && str_replace(' ', '', JText::_('JOFFLINE_MESSAGE')) != ''): ?>
