@@ -25,7 +25,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/apple-touch-icon-72x72.png"> <!-- ipad -->
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/apple-touch-icon-114x114.png"> <!-- iphone retina -->
   <link href="<?php echo $tpath; ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /> <!-- favicon -->
-  <script src="<?php echo $tpath; ?>/js/modernizr.js" type="text/javascript"></script>
+  <script src="<?php echo $tpath; ?>/js/modernizr-2.6.2.js" type="text/javascript"></script>
 </head>
 
 <body>

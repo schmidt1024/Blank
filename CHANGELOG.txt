@@ -19,6 +19,17 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
+-------------------- 1.2.6 [2012-11-16] -------------------
+# offline.php fix link to modernizr
+# error.php fix link to modernizr
+^ Bootstrap 2.2.1 files
+  ^ bootstrap-responsive.css
+  ^ bootstrap.css: inkl. change path to image folder
+  ^ glyphicons-halflings-white.png
+  ^ glyphicons-halflings.png
+  ^ bootstrap.js
+  ^ bootstrap.min.js
+
 -------------------- 1.2.5 [2012-09-22] -------------------
 + jquery-1.8.2.min.js
 ^ index.php: get variables in url with &amp; instead of &
