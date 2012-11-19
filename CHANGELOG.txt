@@ -19,6 +19,12 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
+-------------------- 1.2.7 [2012-11-19] -------------------
++ jquery-1.8.3.min.js
+- jquery-1.8.2.min.js
+- PIE.js
+- PIE.php
+
 -------------------- 1.2.6 [2012-11-16] -------------------
 # offline.php fix link to modernizr
 # error.php fix link to modernizr

@@ -20,7 +20,7 @@ header($ExpStr);
 // parameter
 $bootstrap = $_GET['b'];
 
-if ($bootstrap==1) require('jquery-1.8.2.min.js');
+if ($bootstrap==1) require('jquery-1.8.3.min.js');
 if ($bootstrap==1) require('bootstrap.min.js');
 
 require('../../../media/system/js/mootools-core.js');
