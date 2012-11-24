@@ -64,6 +64,13 @@
   				</field>
   				<field name="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DOC" type="spacer" hr="false" />
   				<field type="spacer" hr="true" />
+				<!-- Foundation Zurb-->
+  		    <field name="zurb" type="radio" default="0" label="TPL_TEMPLATENAME_PARAMETER_ZURB_LABEL" description="TPL_TEMPLATENAME_PARAMETER_ZURB_DESC">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+  				<field name="TPL_TEMPLATENAME_PARAMETER_ZURB_DOC" type="spacer" hr="false" />
+  				<field type="spacer" hr="true" />
 				<!-- PIE-->
   				<field name="pie" type="radio" default="1" label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
   					<option value="0">JNO</option>
