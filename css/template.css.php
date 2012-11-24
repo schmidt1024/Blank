@@ -8,6 +8,7 @@
 
 // parameter
 $bootstrap = $_GET['b'];
+$zurb = $_GET['z'];
 
 //initialize ob_gzhandler to send and compress data
 ob_start ("ob_gzhandler");
@@ -48,6 +49,10 @@ if ($bootstrap==1) require('bootstrap.css');
 if ($bootstrap==0) require('reset.css');
                    require('template.css');
 if ($bootstrap==1) require('bootstrap-responsive.css');
+
+if ($zurb==1) require('foundation.css');
+if ($zurb==0) require('reset.css');
+              require('template.css');
 
 require('../../../media/system/css/system.css');
 require('../../system/css/system.css');
