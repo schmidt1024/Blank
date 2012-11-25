@@ -18,6 +18,6 @@ Addons
 * Twitter Bootstrap 2.2.1 (http://twitter.github.com/bootstrap/)
 * jQuery 1.8.3 (http://jquery.com)
 * PIE 1.0.0 (http://css3pie.com)
-* Foundation Zurb 3.0 (http://foundation.zurb.com/)
+* Foundation Zurb 3 (http://foundation.zurb.com/)
 
 [Getting Started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started)
