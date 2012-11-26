@@ -19,9 +19,14 @@ header($ExpStr);
 
 // parameter
 $bootstrap = $_GET['b'];
+$zurb = $_GET['z'];
 
 if ($bootstrap==1) require('jquery-1.8.3.min.js');
 if ($bootstrap==1) require('bootstrap.min.js');
+
+if ($zurb==1) require('jquery-1.8.3.min.js');
+if ($zurb==1) require('foundation.min.js');
+if ($zurb==1) require('app.js');
 
 require('../../../media/system/js/mootools-core.js');
 require('../../../media/system/js/core.js');
