@@ -9,6 +9,7 @@
 // parameter
 $bootstrap = $_GET['b'];
 $zurb = $_GET['z'];
+$zurbicons = $_GET['zi'];
 
 //initialize ob_gzhandler to send and compress data
 ob_start ("ob_gzhandler");
@@ -51,6 +52,9 @@ if ($bootstrap==1) require('bootstrap-responsive.css');
 
 if ($zurb==1) require('foundation.css');
 if ($zurb==0) require('reset.css');
+
+if ($zurbicons==1) require('general_foundicons.css');
+if ($zurbicons==1) require('general_foundicons_ie7.css');
 
 /* For all */ require('template.css');
 

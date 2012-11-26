@@ -12,6 +12,7 @@ defined( '_JEXEC' ) or die;
 $modernizr = $this->params->get('modernizr');
 $bootstrap = $this->params->get('bootstrap');
 $zurb = $this->params->get('zurb');
+$zurbicons = $this->params->get('zurbicons');
 $pie = $this->params->get('pie');
 
 // variables
@@ -24,7 +25,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // load sheets and scripts
-$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$bootstrap.'&amp;z='.$zurb.'&amp;v=1');
+$doc->addStyleSheet($tpath.'/css/template.css.php?b='.$bootstrap.'&amp;z='.$zurb.'&amp;zi='.$zurbicons.'&amp;v=1');
 if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js'); // <- this script must be in the head
 
 // unset scripts, put them into /js/template.js.php to minify http requests
