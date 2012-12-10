@@ -19,6 +19,15 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
+-------------------- 1.2.8 [2012-12-10] -------------------
+^ Bootstrap 2.2.2 files
+  ^ bootstrap-responsive.css
+  ^ bootstrap.css: inkl. change path to image folder
+  ^ glyphicons-halflings-white.png
+  ^ glyphicons-halflings.png
+  ^ bootstrap.js
+  ^ bootstrap.min.js
+
 -------------------- 1.2.7 [2012-11-19] -------------------
 + jquery-1.8.3.min.js
 - jquery-1.8.2.min.js
