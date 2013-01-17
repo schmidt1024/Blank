@@ -19,6 +19,8 @@ $doc = JFactory::getDocument();
 $params = $app->getParams();
 $pageclass = $params->get('pageclass_sfx'); // parameter (menu entry)
 $tpath = $this->baseurl.'/templates/'.$this->template;
+$menu=& JSite::getMenu();
+$active = JFactory::getApplication()->getMenu()->getActive();
 
 $this->setGenerator(null);
 
@@ -53,7 +55,7 @@ unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
   <?php endif; ?>
 </head>
 	
-<body class="<?php echo $pageclass; ?>">
+<body class="<?php echo $pageclass; ?> <?php if ($menu->getActive() == $menu->getDefault()) { echo 'front'; } else { echo 'sub'; } ?> <?php echo $active->alias; ?>">
   <!-- 
     YOUR CODE HERE
   -->
