@@ -1,0 +1,71 @@
+// normalize
+@import 'normalize.scss';
+
+
+
+// colors
+$white: #FFFFFF;
+
+
+
+/* TEMPLATE SASS
+*********************************************/
+html {
+  overflow-y: scroll;
+}
+body {
+	background-color:$white;
+}
+
+
+
+/* LAYOUT
+*********************************************/
+
+
+
+/* HELPER
+*********************************************/
+/* Floats */
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.ie7 .group {
+  zoom: 1;
+}
+
+
+
+/* Media Queries
+*********************************************/
+/* Retina */
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
+	
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+/* Large desktop */
+@media (min-width: 1200px) {
+  
+}

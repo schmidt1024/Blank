@@ -1,12 +1,4 @@
-<?php  
-/*------------------------------------------------------------------------
-# author    your name or company
-# copyright Copyright (C) 2011 example.com. All rights reserved.
-# @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-# Website   http://www.example.com
--------------------------------------------------------------------------*/
-
-defined( '_JEXEC' ) or die;
+<?php defined( '_JEXEC' ) or die;
 
 // variables
 $app = JFactory::getApplication();
@@ -16,8 +8,8 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // load sheets and scripts
-$doc->addStyleSheet($tpath.'/css/offline.css?v=1.0.0'); 
-$doc->addScript($tpath.'/js/modernizr-2.6.2.js');
+$doc->addStyleSheet($tpath.'/css/default/offline.css?v=1'); 
+//$doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 
 ?><!doctype html>
 <!--[if IEMobile]><html class="iemobile" lang="<?php echo $this->language; ?>"> <![endif]-->
@@ -28,10 +20,10 @@ $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 <head>
   <jdoc:include type="head" />
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> <!-- mobile viewport optimized -->
-  <link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/apple-touch-icon-57x57.png"> <!-- iphone, ipod, android -->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/apple-touch-icon-72x72.png"> <!-- ipad -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/apple-touch-icon-114x114.png"> <!-- iphone retina -->
-  <link href="<?php echo $tpath; ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /> <!-- favicon -->
+  <link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/images/apple-touch-icon-57x57-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/images/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
 </head>
 
 <body>
@@ -40,6 +32,9 @@ $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
     <?php if ($app->getCfg('offline_image')) : ?>
       <img src="<?php echo $app->getCfg('offline_image'); ?>" alt="<?php echo $app->getCfg('sitename'); ?>" />
     <?php endif; ?>
+    <h1>
+      <?php echo htmlspecialchars($app->getCfg('sitename')); ?>
+    </h1>
     <?php if ($app->getCfg('display_offline_message', 1) == 1 && str_replace(' ', '', $app->getCfg('offline_message')) != ''): ?>
 		<p><?php echo $app->getCfg('offline_message'); ?></p>
     <?php elseif ($app->getCfg('display_offline_message', 1) == 2 && str_replace(' ', '', JText::_('JOFFLINE_MESSAGE')) != ''): ?>

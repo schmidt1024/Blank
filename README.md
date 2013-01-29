@@ -1,22 +1,49 @@
-Blank Template
-==============
+# [Blank Template](http://blank.vc)
 
-Light, powerful and free template for Joomla! for faster and easier web development.
+Light, powerful and free template for Joomla!
+for faster and easier web development.
 
-Functions
----------
 
-* Start from scratch with the css reset sheet
-* Support tablets, phones and even IE7
+## Demo
+
+Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind it's only a blank white page with disabled parameter.
+
+## Functions
+
+* Crazy fast with disabled parameter
+* Start from scratch with normalize.css or
+* Choose Foundation or Bootstrap framework
+* Great Icons in Boostrap with Font Awesome
+* Support for tablets, phones and even IE7
+* Possibility to code a jQuery standalone template
+* Disable javascripts like mootools.js, caption.js etc.
 * Customisable error, offline and print page
-* Advanced properties (html5, css3, ...)
+* Advanced properties (compressor, less, sass ...)
 
-Addons
-------
+## Addons 
 
-* Modernizr 2.6.2 (http://modernizr.com)
-* Twitter Bootstrap 2.2.2 (http://twitter.github.com/bootstrap/)
-* jQuery 1.8.3 (http://jquery.com)
-* PIE 1.0.0 (http://css3pie.com)
+* [Modernizr 2.6.2](http://modernizr.com/)
+* [jQuery 1.9.0](http://jquery.com/)
+* [Foundation 3.2](http://foundation.zurb.com/)
+* [Bootstrap 2.2.2](http://getbootstrap.com/)
+* [Font Awesome 3.0.2](http://fortawesome.github.com/Font-Awesome/)
+* [normalize.css 2.0.1](http://necolas.github.com/normalize.css/)
+* [PIE 1.0.0](http://css3pie.com/)
+* [LESS](http://lesscss.org/)
+* [SASS](http://sass-lang.com/)
 
-[Getting Started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started)
+## PSD
+
+[Download psd.zip](http://itr.im/psd) (12 MB) for faster icon and thumbnail creation. Package inlcudes following files:
+
+* App Icon Template [2.0].psd
+* template_preview.psd
+* template_thumbnail.psd
+
+## Get Started
+
+Read the [wiki to get started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started).
+
+## Documentation
+
+Beginn to understand the whole template and [read the ebook](http://blank.vc/ebook.html).
