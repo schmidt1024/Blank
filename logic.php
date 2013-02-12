@@ -70,18 +70,18 @@ $this->setGenerator(null);
 // add javascripts
 if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 if ($foundation==1) : 
-  $doc->addScript($tpath.'/js/jquery-1.9.0.min.js');
+  $doc->addScript($tpath.'/js/jquery-1.9.1.min.js');
   $doc->addScript($tpath.'/js/foundation.min.js');
   $doc->addScript($tpath.'/js/app.js');
 endif;
 if ($bootstrap==1 && JVERSION>='3') :
   JHtml::_('bootstrap.framework');
 elseif ($bootstrap==1) :
-  $doc->addScript($tpath.'/js/jquery-1.9.0.min.js');
+  $doc->addScript($tpath.'/js/jquery-1.9.1.min.js');
   $doc->addScript($tpath.'/js/jquery-noconflict.js');
   $doc->addScript($tpath.'/js/bootstrap.min.js');
 endif;
-if ($jquery==1) $doc->addScript($tpath.'/js/jquery-1.9.0.min.js');
+if ($jquery==1) $doc->addScript($tpath.'/js/jquery-1.9.1.min.js');
 
 // add stylesheets
 if ($cssmethod=='css') : 

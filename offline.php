@@ -8,7 +8,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // load sheets and scripts
-$doc->addStyleSheet($tpath.'/css/default/offline.css?v=1'); 
+$doc->addStyleSheet($tpath.'/css/offline.css?v=1'); 
 //$doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 
 ?><!doctype html>

@@ -23,9 +23,9 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 ## Addons 
 
 * [Modernizr 2.6.2](http://modernizr.com/)
-* [jQuery 1.9.0](http://jquery.com/)
+* [jQuery 1.9.1](http://jquery.com/)
 * [Foundation 3.2.5](http://foundation.zurb.com/)
-* [Bootstrap 2.2.2](http://getbootstrap.com/)
+* [Bootstrap 2.3.0](http://getbootstrap.com/)
 * [Font Awesome 3.0.2](http://fortawesome.github.com/Font-Awesome/)
 * [normalize.css 2.1.0](http://necolas.github.com/normalize.css/)
 * [PIE 1.0.0](http://css3pie.com/)
