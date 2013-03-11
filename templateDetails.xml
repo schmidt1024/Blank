@@ -3,7 +3,7 @@
 
 <extension version="2.5" type="template" client="site" method="upgrade">
 	
-	<name>templatename</name><!-- name the template -->
+	<name>frontend</name><!-- name the template -->
 	<creationDate>xxxx-xx-xx</creationDate><!-- the date your are beginn to code -->
 	<author>your name</author><!-- your name (oops, I repeat myself) -->
 	<copyright>Copyright © xxxx example.com</copyright><!-- for who you are coding -->
@@ -11,7 +11,7 @@
 	<authorUrl>http://www.example.com</authorUrl><!-- your url -->
 	<version>1.0.0</version><!-- give your template a number -->
 	<description><![CDATA[ 
-		<h1>templatename</h1>
+		<h1>frontend</h1>
 		<p>Created by <a href="http://www.example.com" target="_blank">your name | example.com</a>.</p>
 	]]></description><!-- change the description as you like -->
 	
@@ -35,8 +35,8 @@
 	</files>
 	
 	<languages folder="language"><!-- no need to change -->
-		<language tag="de-DE">de-DE.tpl_templatename.ini</language>
-		<language tag="en-GB">en-GB.tpl_templatename.ini</language>
+		<language tag="de-DE">de-DE.tpl_frontend.ini</language>
+		<language tag="en-GB">en-GB.tpl_frontend.ini</language>
 	</languages>
 	
 	<positions><!-- define the positions for modules here -->
@@ -50,58 +50,66 @@
 
 				<!-- MODERNIZR-->
 				<field name="modernizr" type="radio" default="0" 
-					label="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_MODERNIZR_DESC">
+					label="TPL_FRONTEND_PARAMETER_MODERNIZR_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_MODERNIZR_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 
 				<!-- CSS METHOD -->
 				<field name="cssmethod" type="radio" default="css" 
-					label="TPL_TEMPLATENAME_PARAMETER_CSSMETHOD_LABEL" 
-					description="">
+					label="TPL_FRONTEND_PARAMETER_CSSMETHOD_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_CSSMETHOD_DESC">
 					<option value="css">CSS (default)</option>
 					<option value="min">CSS (minified)</option>
 					<option value="less">LESS</option>
 					<option value="sass">SASS</option>
 				</field>
 
+				<!-- LESS.JS -->
+				<field name="lessjs" type="radio" default="0" 
+					label="TPL_FRONTEND_PARAMETER_LESSJS_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_LESSJS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
 				<!-- FOUNDATION -->
 				<field name="foundation" type="radio" default="0" 
-					label="TPL_TEMPLATENAME_PARAMETER_FOUNDATION_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_FOUNDATION_DESC">
+					label="TPL_FRONTEND_PARAMETER_FOUNDATION_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_FOUNDATION_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 
 				<!-- BOOTSTRAP -->
 				<field name="bootstrap" type="radio" default="0" 
-					label="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_BOOTSTRAP_DESC">
+					label="TPL_FRONTEND_PARAMETER_BOOTSTRAP_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_BOOTSTRAP_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 
 				<!-- FONT-AWESOME -->
 				<field name="fontawesome" type="radio" default="0" 
-					label="TPL_TEMPLATENAME_PARAMETER_FONTAWESOME_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_FONTAWESOME_DESC">
+					label="TPL_FRONTEND_PARAMETER_FONTAWESOME_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_FONTAWESOME_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 
 				<!-- JQUERY -->
 				<field name="jquery" type="radio" default="0" 
-					label="TPL_TEMPLATENAME_PARAMETER_JQUERY_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_JQUERY_DESC">
+					label="TPL_FRONTEND_PARAMETER_JQUERY_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_JQUERY_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 
 				<!-- PIE-->
 				<field name="pie" type="radio" default="0" 
-					label="TPL_TEMPLATENAME_PARAMETER_PIE_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_PIE_DESC">
+					label="TPL_FRONTEND_PARAMETER_PIE_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_PIE_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
@@ -112,30 +120,30 @@
 
 				<!-- Disable JavaScript -->	
 				<field name="disablejs" type="radio" default="0" 
-					label="TPL_TEMPLATENAME_PARAMETER_DISABLEJS_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_DISABLEJS_DESC">
+					label="TPL_FRONTEND_PARAMETER_DISABLEJS_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_DISABLEJS_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 
 				<!-- JavaScript Files -->
 				<field name="fnjs" type="textarea" 
-					label="TPL_TEMPLATENAME_PARAMETER_FNJS_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_FNJS_LABEL" 
+					label="TPL_FRONTEND_PARAMETER_FNJS_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_FNJS_LABEL" 
 					cols="30" default="mootools-core.js,caption.js" rows="4" />
 
 				<!-- Disable CSS -->
 				<field name="disablecss" type="radio" default="0" 
-					label="TPL_TEMPLATENAME_PARAMETER_DISABLECSS_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_DISABLECSS_DESC">
+					label="TPL_FRONTEND_PARAMETER_DISABLECSS_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_DISABLECSS_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>	
 				</field>
 
 				<!-- CSS Files -->
 				<field name="fncss" type="textarea" 
-					label="TPL_TEMPLATENAME_PARAMETER_FNCSS_LABEL" 
-					description="TPL_TEMPLATENAME_PARAMETER_FNCSS_DESC" 
+					label="TPL_FRONTEND_PARAMETER_FNCSS_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_FNCSS_DESC" 
 					cols="30" rows="4" />
 
 			</fieldset>

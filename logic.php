@@ -13,6 +13,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 // parameter
 $modernizr = $this->params->get('modernizr');
 $cssmethod = $this->params->get('cssmethod');
+$lessjs = $this->params->get('lessjs');
 $foundation = $this->params->get('foundation');
 $bootstrap = $this->params->get('bootstrap');
 $fontawesome = $this->params->get('fontawesome');
@@ -72,7 +73,6 @@ if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 if ($foundation==1) : 
   $doc->addScript($tpath.'/js/jquery-1.9.1.min.js');
   $doc->addScript($tpath.'/js/foundation.min.js');
-  $doc->addScript($tpath.'/js/app.js');
 endif;
 if ($bootstrap==1 && JVERSION>='3') :
   JHtml::_('bootstrap.framework');
@@ -86,10 +86,7 @@ if ($jquery==1) $doc->addScript($tpath.'/js/jquery-1.9.1.min.js');
 // add stylesheets
 if ($cssmethod=='css') : 
   if ($foundation==0 && $bootstrap==0) $doc->addStyleSheet($tpath.'/css/normalize.css');
-  if ($foundation==1) : 
-    $doc->addStyleSheet($tpath.'/css/foundation.min.css');
-    $doc->addStyleSheet($tpath.'/css/app.css');
-  endif;
+  if ($foundation==1) $doc->addStyleSheet($tpath.'/css/foundation.min.css');
   if ($bootstrap==1) :
     $doc->addStyleSheet($tpath.'/css/bootstrap.min.css');
     $doc->addStyleSheet($tpath.'/css/bootstrap-responsive.min.css');
@@ -106,6 +103,12 @@ else :
 endif;
 
 // add template sheet
-$doc->addStyleSheet($tpath.'/'.$cssmethod.'/template.css'.$ext.'?f='.$foundation.'&amp;b='.$bootstrap.'&amp;fa='.$fontawesome.'&amp;v=1');
+if ($lessjs==0) $doc->addStyleSheet($tpath.'/'.$cssmethod.'/template.css'.$ext.'?f='.$foundation.'&amp;b='.$bootstrap.'&amp;fa='.$fontawesome.'&amp;v=1');
+if ($lessjs==1 && $cssmethod=='less') :
+  $doc->addCustomTag('<link rel="stylesheet/less" type="text/css" href="'.$tpath.'/'.$cssmethod.'/template.less" />');
+  $doc->addCustomTag('<script src="'.$tpath.'/js/less-1.3.3.min.js" type="text/javascript"></script>');
+  //$doc->addScript($tpath.'/js/less-1.3.3.min.js');
+endif;
+
 
 ?>

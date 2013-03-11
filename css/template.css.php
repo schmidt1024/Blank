@@ -41,10 +41,7 @@ function compress($buffer) {
 }
 
 if ($foundation==0 && $bootstrap==0) require('normalize.css');
-if ($foundation==1) : 
-	require('foundation.css');
-	require('app.css');
-endif;
+if ($foundation==1) require('foundation.css');
 if ($bootstrap==1) : 
 	require('bootstrap.css');
 	require('bootstrap-responsive.css');
