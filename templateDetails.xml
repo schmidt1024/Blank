@@ -106,10 +106,26 @@
 					<option value="1">JYES</option>
 				</field>
 
-				<!-- PIE-->
+				<!-- PIE -->
 				<field name="pie" type="radio" default="0" 
 					label="TPL_FRONTEND_PARAMETER_PIE_LABEL" 
 					description="TPL_FRONTEND_PARAMETER_PIE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<!-- Google Chrome Frame -->
+				<field name="chromeframe" type="radio" default="0" 
+					label="TPL_FRONTEND_PARAMETER_CHROMEFRAME_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_CHROMEFRAME_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<!-- IE=edge -->
+				<field name="ieedge" type="radio" default="0" 
+					label="TPL_FRONTEND_PARAMETER_IEEDGE_LABEL" 
+					description="TPL_FRONTEND_PARAMETER_IEEDGE_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
