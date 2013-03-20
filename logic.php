@@ -19,6 +19,8 @@ $bootstrap = $this->params->get('bootstrap');
 $fontawesome = $this->params->get('fontawesome');
 $jquery = $this->params->get('jquery');
 $pie = $this->params->get('pie');
+$chromeframe = $this->params->get('chromeframe');
+$ieedge = $this->params->get('ieedge');
 
 // advanced parameter
 if ($app->isSite()) {
@@ -110,5 +112,10 @@ if ($lessjs==1 && $cssmethod=='less') :
   //$doc->addScript($tpath.'/js/less-1.3.3.min.js');
 endif;
 
+// Google Chrome Frame & IE=edge
+if ($chromeframe==1 && $ieedge==1) : $doc->setMetaData('X-UA-Compatible','IE=edge,chrome=1', true);
+elseif ($chromeframe==1 && $ieedge==0) : $doc->setMetaData('X-UA-Compatible','chrome=1', true);
+elseif ($chromeframe==0 && $ieedge==1) : $doc->setMetaData('X-UA-Compatible','IE=edge', true);
+endif;
 
 ?>
