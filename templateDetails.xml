@@ -39,6 +39,8 @@
 	<languages folder="language"><!-- no need to change -->
 		<language tag="de-DE">de-DE.tpl_templatename.ini</language>
 		<language tag="en-GB">en-GB.tpl_templatename.ini</language>
+		<language tag="ca-CA">ca-CA.tpl_templatename.ini</language>
+		<language tag="es-ES">es-ES.tpl_templatename.ini</language>
 	</languages>
 	
 	<positions><!-- define the positions for modules here -->
