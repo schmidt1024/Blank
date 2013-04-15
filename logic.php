@@ -68,6 +68,9 @@ if ($app->isSite()) {
 // generator tag
 $this->setGenerator(null);
 
+// force latest IE & chrome frame
+$doc->setMetadata('x-ua-compatible', 'IE=edge,chrome=1');
+
 // add javascripts
 if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 if ($foundation==1) : 

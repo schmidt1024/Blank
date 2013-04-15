@@ -6,7 +6,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version : '4.0.0',
+    version : '4.1.2',
 
     settings : {
       index : 0,
@@ -16,9 +16,8 @@
       init : false
     },
 
-    init : function (scope, method, options) {
+    init : function (section, method, options) {
       var self = this;
-      this.scope = scope || this.scope;
 
       if (typeof method === 'object') {
         $.extend(true, this.settings, method);
@@ -26,7 +25,7 @@
 
       if (typeof method != 'string') {
 
-        $('nav.top-bar').each(function () {
+        $('.top-bar').each(function () {
           self.settings.$w = $(window);
           self.settings.$topbar = $(this);
           self.settings.$section = self.settings.$topbar.find('section');
@@ -59,14 +58,14 @@
 
     events : function () {
       var self = this;
-
+      var offst = this.outerHeight($('.top-bar'));
       $(this.scope)
         .on('click.fndtn.topbar', '.top-bar .toggle-topbar', function (e) {
           var topbar = $(this).closest('.top-bar'),
               section = topbar.find('section, .section'),
               titlebar = topbar.children('ul').first();
 
-          if (!self.settings.$topbar.data('height')) self.largestUL();
+          if (!topbar.data('height')) self.largestUL();
 
           e.preventDefault();
 
@@ -77,10 +76,26 @@
           }
 
           if (!topbar.hasClass('expanded')) {
-            section.css({left: '0%'});
-            section.find('>.name').css({left: '100%'});
+            if (!self.rtl) {
+              section.css({left: '0%'});
+              section.find('>.name').css({left: '100%'});
+            } else {
+              section.css({right: '0%'});
+              section.find('>.name').css({right: '100%'});
+            }
             section.find('li.moved').removeClass('moved');
             topbar.data('index', 0);
+
+            if (topbar.hasClass('fixed')) {
+              topbar.parent().addClass('fixed');
+              topbar.removeClass('fixed');
+              $('body').css('padding-top',offst);
+            }
+          } else if (topbar.parent().hasClass('fixed')) {
+            topbar.parent().removeClass('fixed');
+            topbar.addClass('fixed');
+            $('body').css('padding-top','0');
+            window.scrollTo(0,0);
           }
         })
 
@@ -99,19 +114,26 @@
 
             topbar.data('index', topbar.data('index') + 1);
             $selectedLi.addClass('moved');
-            section.css({left: -(100 * topbar.data('index')) + '%'});
-            section.find('>.name').css({left: 100 * topbar.data('index') + '%'});
+            if (!self.rtl) {
+              section.css({left: -(100 * topbar.data('index')) + '%'});
+              section.find('>.name').css({left: 100 * topbar.data('index') + '%'});
+            } else {
+              section.css({right: -(100 * topbar.data('index')) + '%'});
+              section.find('>.name').css({right: 100 * topbar.data('index') + '%'});
+            }
 
             $this.siblings('ul')
               .height(topbar.data('height') + self.outerHeight(titlebar, true));
             topbar
               .css('min-height', topbar.data('height') + self.outerHeight(titlebar, true) * 2)
           }
-      });
+        });
 
       $(window).on('resize.fndtn.topbar', function () {
-        if (!this.breakpoint()) {
-          $('.top-bar').css('min-height', '');
+        if (!self.breakpoint()) {
+          $('.top-bar')
+            .css('min-height', '')
+            .removeClass('expanded');
         }
       }.bind(this));
 
@@ -126,8 +148,13 @@
             $previousLevelUl = $movedLi.parent();
 
         topbar.data('index', topbar.data('index') - 1);
-        section.css({left: -(100 * topbar.data('index')) + '%'});
-        section.find('>.name').css({'left': 100 * topbar.data('index') + '%'});
+        if (!self.rtl) {
+          section.css({left: -(100 * topbar.data('index')) + '%'});
+          section.find('>.name').css({left: 100 * topbar.data('index') + '%'});
+        } else {
+          section.css({right: -(100 * topbar.data('index')) + '%'});
+          section.find('>.name').css({right: 100 * topbar.data('index') + '%'});
+        }
 
         if (topbar.data('index') === 0) {
           topbar.css('min-height', 0);
@@ -191,18 +218,18 @@
       if ($(klass).length > 0) {
         var distance = $(klass).length ? $(klass).offset().top: 0,
             $window = $(window);
-            var offst = this.outerHeight($('nav.top-bar'))+20;
+            var offst = this.outerHeight($('.top-bar'));
 
           $window.scroll(function() {
             if ($window.scrollTop() >= (distance)) {
-               $(klass).addClass("fixed");
-                 $('body').css('padding-top',offst);
+              $(klass).addClass("fixed");
+              $('body').css('padding-top',offst);
             }
 
-           else if ($window.scrollTop() < distance) {
+            else if ($window.scrollTop() < distance) {
               $(klass).removeClass("fixed");
               $('body').css('padding-top','0');
-           }
+            }
         });
       }
     },
