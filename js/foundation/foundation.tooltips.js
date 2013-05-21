@@ -6,12 +6,13 @@
   Foundation.libs.tooltips = {
     name: 'tooltips',
 
-    version : '4.1.0',
+    version : '4.1.3',
 
     settings : {
       selector : '.has-tip',
       additionalInheritableClasses : [],
       tooltipClass : '.tooltip',
+      appendTo: 'body',
       tipTemplate : function (selector, content) {
         return '<span data-selector="' + selector + '" class="' 
           + Foundation.libs.tooltips.settings.tooltipClass.substring(1) 
@@ -98,10 +99,10 @@
     },
 
     create : function ($target) {
-      var $tip = $(this.settings.tipTemplate(this.selector($target), $('<div>').html($target.attr('title')).html())),
+      var $tip = $(this.settings.tipTemplate(this.selector($target), $('<div></div>').html($target.attr('title')).html())),
           classes = this.inheritable_classes($target);
 
-      $tip.addClass(classes).appendTo('body');
+      $tip.addClass(classes).appendTo(this.settings.appendTo);
       if (Modernizr.touch) {
         $tip.append('<span class="tap-to-close">tap to close </span>');
       }

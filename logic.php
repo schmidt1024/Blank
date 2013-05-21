@@ -19,6 +19,7 @@ $bootstrap = $this->params->get('bootstrap');
 $fontawesome = $this->params->get('fontawesome');
 $jquery = $this->params->get('jquery');
 $pie = $this->params->get('pie');
+$googlefont = $this->params->get('googlefont');
 
 // advanced parameter
 if ($app->isSite()) {
@@ -96,6 +97,9 @@ if ($cssmethod=='css') :
     if ($fontawesome==1) $doc->addStyleSheet($tpath.'/css/font-awesome.min.css');
   endif;
 endif;
+
+// add google font
+if ($googlefont !='') $doc->addStyleSheet("https://fonts.googleapis.com/css?family=".$googlefont);
 
 // file ending
 if ($cssmethod=='min') : 

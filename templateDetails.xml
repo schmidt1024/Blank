@@ -116,6 +116,12 @@
 					<option value="1">JYES</option>
 				</field>
 
+				<!-- GOOGLE FONT-->
+                <field name="googlefont" type="text" default=""
+                	label="TPL_FRONTEND_PARAMETER_GOOGLEFONT_LABEL"
+                	description="TPL_FRONTEND_PARAMETER_GOOGLEFONT_DESC">
+				</field>
+
 			</fieldset>
 			
 			<fieldset name="advanced">
