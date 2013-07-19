@@ -75,17 +75,17 @@ $doc->setMetadata('x-ua-compatible', 'IE=edge,chrome=1');
 // add javascripts
 if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 if ($foundation==1) : 
-  $doc->addScript($tpath.'/js/jquery-1.9.1.min.js');
+  $doc->addScript($tpath.'/js/jquery-1.10.2.min.js');
   $doc->addScript($tpath.'/js/foundation.min.js');
 endif;
 if ($bootstrap==1 && JVERSION>='3') :
   JHtml::_('bootstrap.framework');
 elseif ($bootstrap==1) :
-  $doc->addScript($tpath.'/js/jquery-1.9.1.min.js');
+  $doc->addScript($tpath.'/js/jquery-1.10.2.min.js');
   $doc->addScript($tpath.'/js/jquery-noconflict.js');
   $doc->addScript($tpath.'/js/bootstrap.min.js');
 endif;
-if ($jquery==1) $doc->addScript($tpath.'/js/jquery-1.9.1.min.js');
+if ($jquery==1) $doc->addScript($tpath.'/js/jquery-1.10.2.min.js');
 
 // add stylesheets
 if ($cssmethod=='css') : 
@@ -113,8 +113,7 @@ endif;
 if ($lessjs==0) $doc->addStyleSheet($tpath.'/'.$cssmethod.'/template.css'.$ext.'?f='.$foundation.'&amp;b='.$bootstrap.'&amp;fa='.$fontawesome.'&amp;v=1');
 if ($lessjs==1 && $cssmethod=='less') :
   $doc->addCustomTag('<link rel="stylesheet/less" type="text/css" href="'.$tpath.'/'.$cssmethod.'/template.less" />');
-  $doc->addCustomTag('<script src="'.$tpath.'/js/less-1.3.3.min.js" type="text/javascript"></script>');
-  //$doc->addScript($tpath.'/js/less-1.3.3.min.js');
+  $doc->addCustomTag('<script src="'.$tpath.'/js/less-1.4.1.min.js" type="text/javascript"></script>');
 endif;
 
 

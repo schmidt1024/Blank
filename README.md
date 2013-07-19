@@ -23,13 +23,13 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 ## Addons 
 
 * [Modernizr 2.6.2](http://modernizr.com/)
-* [jQuery 1.9.1](http://jquery.com/)
-* [Foundation 4.1.6](http://foundation.zurb.com/)
-* [Bootstrap 2.3.1](http://getbootstrap.com/)
-* [Font Awesome 3.1.1](http://fortawesome.github.com/Font-Awesome/)
+* [jQuery 1.10.2](http://jquery.com/)
+* [Foundation 4.3.0](http://foundation.zurb.com/)
+* [Bootstrap 2.3.2](http://getbootstrap.com/)
+* [Font Awesome 3.2.1](http://fortawesome.github.com/Font-Awesome/)
 * [normalize.css 2.1.2](http://necolas.github.com/normalize.css/)
 * [PIE 1.0.0](http://css3pie.com/)
-* [LESS incl. less.js 1.3.3](http://lesscss.org/)
+* [LESS incl. less.js 1.4.1](http://lesscss.org/)
 * [SASS](http://sass-lang.com/)
 
 ## PSD

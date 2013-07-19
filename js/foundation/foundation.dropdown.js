@@ -6,23 +6,24 @@
   Foundation.libs.dropdown = {
     name : 'dropdown',
 
-    version : '4.1.3',
+    version : '4.3.0',
 
     settings : {
       activeClass: 'open',
+      is_hover: false,
       opened: function(){},
       closed: function(){}
     },
 
     init : function (scope, method, options) {
       this.scope = scope || this.scope;
-      Foundation.inherit(this, 'throttle scrollLeft');
+      Foundation.inherit(this, 'throttle scrollLeft data_options');
 
       if (typeof method === 'object') {
         $.extend(true, this.settings, method);
       }
 
-      if (typeof method != 'string') {
+      if (typeof method !== 'string') {
 
         if (!this.settings.init) {
           this.events();
@@ -39,13 +40,24 @@
 
       $(this.scope)
         .on('click.fndtn.dropdown', '[data-dropdown]', function (e) {
-            e.preventDefault();
-            self.toggle($(this));
+          var settings = $.extend({}, self.settings, self.data_options($(this)));
+          e.preventDefault();
+
+          if (!settings.is_hover) self.toggle($(this));
+        })
+        .on('mouseenter', '[data-dropdown]', function (e) {
+          var settings = $.extend({}, self.settings, self.data_options($(this)));
+          if (settings.is_hover) self.toggle($(this));
+        })
+        .on('mouseleave', '[data-dropdown-content]', function (e) {
+          var target = $('[data-dropdown="' + $(this).attr('id') + '"]'),
+              settings = $.extend({}, self.settings, self.data_options(target));
+          if (settings.is_hover) self.close.call(self, $(this));
         })
         .on('opened.fndtn.dropdown', '[data-dropdown-content]', this.settings.opened)
         .on('closed.fndtn.dropdown', '[data-dropdown-content]', this.settings.closed);
 
-      $('body').on('click.fndtn.dropdown', function (e) {
+      $(document).on('click.fndtn.dropdown', function (e) {
         var parent = $(e.target).closest('[data-dropdown-content]');
 
         if ($(e.target).data('dropdown')) {
@@ -93,6 +105,7 @@
       if (dropdown.hasClass(this.settings.activeClass)) {
         this.close.call(this, dropdown);
       } else {
+        this.close.call(this, $('[data-dropdown-content]'))
         this.open.call(this, dropdown, target);
       }
     },
@@ -107,14 +120,14 @@
     },
 
     css : function (dropdown, target) {
-      // temporary workaround until 4.2
-      if (/body/i.test(dropdown.offsetParent()[0].nodeName)) {
+      var offset_parent = dropdown.offsetParent();
+      // if (offset_parent.length > 0 && /body/i.test(dropdown.offsetParent()[0].nodeName)) {
         var position = target.offset();
-        position.top -= dropdown.offsetParent().offset().top;
-        position.left -= dropdown.offsetParent().offset().left;
-      } else {
-        var position = target.position();
-      }
+        position.top -= offset_parent.offset().top;
+        position.left -= offset_parent.offset().left;
+      // } else {
+      //   var position = target.position();
+      // }
 
       if (this.small()) {
         dropdown.css({
@@ -127,6 +140,9 @@
       } else {
         if (!Foundation.rtl && $(window).width() > this.outerWidth(dropdown) + target.offset().left) {
           var left = position.left;
+          if (dropdown.hasClass('right')) {
+            dropdown.removeClass('right');
+          }
         } else {
           if (!dropdown.hasClass('right')) {
             dropdown.addClass('right');
@@ -154,6 +170,8 @@
       $(window).off('.fndtn.dropdown');
       $('[data-dropdown-content]').off('.fndtn.dropdown');
       this.settings.init = false;
-    }
+    },
+
+    reflow : function () {}
   };
 }(Foundation.zj, this, this.document));

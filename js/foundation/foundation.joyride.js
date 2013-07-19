@@ -4,9 +4,9 @@
   'use strict';
 
   Foundation.libs.joyride = {
-    name: 'joyride',
+    name : 'joyride',
 
-    version : '4.1.2',
+    version : '4.2.2',
 
     defaults : {
       expose               : false,      // turn on or off the expose feature
@@ -41,7 +41,8 @@
         modal   : '<div class="joyride-modal-bg"></div>',
         expose  : '<div class="joyride-expose-wrapper"></div>',
         exposeCover: '<div class="joyride-expose-cover"></div>'
-      }
+      },
+      exposeAddClass : '' // One or more space-separated class names to be added to exposed element
     },
 
     settings : {},
@@ -56,7 +57,7 @@
         $.extend(true, this.settings, this.defaults, options);
       }
 
-      if (typeof method != 'string') {
+      if (typeof method !== 'string') {
         if (!this.settings.init) this.events();
 
         return this.settings.init;
@@ -349,7 +350,13 @@
       if (!this.settings.modal) {
         $('.joyride-modal-bg').hide();
       }
-      this.settings.$current_tip.hide();
+
+      // Prevent scroll bouncing...wait to remove from layout
+      this.settings.$current_tip.css('visibility', 'hidden');
+      setTimeout($.proxy(function() {
+        this.hide();
+        this.css('visibility', 'visible');
+      }, this.settings.$current_tip), 0);
       this.settings.postStepCallback(this.settings.$li.index(),
         this.settings.$current_tip);
     },
@@ -565,6 +572,7 @@
           exposeCover,
           el,
           origCSS,
+          origClasses,
           randId = 'expose-'+Math.floor(Math.random()*10000);
 
       if (arguments.length > 0 && arguments[0] instanceof $) {
@@ -597,6 +605,8 @@
         zIndex: el.css('z-index'),
         position: el.css('position')
       };
+      
+      origClasses = el.attr('class') == null ? '' : el.attr('class');
 
       el.css('z-index',parseInt(expose.css('z-index'))+1);
 
@@ -605,6 +615,8 @@
       }
 
       el.data('expose-css',origCSS);
+      el.data('orig-class', origClasses);
+      el.attr('class', origClasses + ' ' + this.settings.exposeAddClass);
 
       exposeCover.css({
         top: el.offset().top,
@@ -626,6 +638,7 @@
           el,
           expose ,
           origCSS,
+          origClasses,
           clearAll = false;
 
       if (arguments.length > 0 && arguments[0] instanceof $) {
@@ -671,6 +684,10 @@
           el.css('position', origCSS.position);
         }
       }
+      
+      origClasses = el.data('orig-class');
+      el.attr('class', origClasses);
+      el.removeData('orig-classes');
 
       el.removeData('expose');
       el.removeData('expose-z-index');
@@ -826,6 +843,8 @@
       $('.joyride-tip-guide, .joyride-modal-bg').remove();
       clearTimeout(this.settings.automate);
       this.settings = {};
-    }
+    },
+
+    reflow : function () {}
   };
 }(Foundation.zj, this, this.document));
