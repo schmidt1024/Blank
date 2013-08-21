@@ -17,7 +17,7 @@
 	
 	<files><!-- no need to change -->
 		<folder>css</folder>
-		<folder>font</folder>
+		<folder>fonts</folder>
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>js</folder>

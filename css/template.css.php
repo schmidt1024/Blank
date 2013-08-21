@@ -44,7 +44,7 @@ if ($foundation==0 && $bootstrap==0) require('normalize.css');
 if ($foundation==1) require('foundation.css');
 if ($bootstrap==1) : 
 	require('bootstrap.css');
-	require('bootstrap-responsive.css');
+	require('bootstrap-theme.css');
 	if ($fontawesome==1) require('font-awesome.css');
 endif;
 
