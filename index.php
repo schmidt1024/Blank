@@ -30,6 +30,14 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php'; // load logic.php
     YOUR CODE HERE
   -->
   <jdoc:include type="modules" name="debug" />
+  
+  <!-- If you can do that, this will be active only when you activate Zurb in Backend will be great
+  
+  This is for make foudation.js plugins like Orbit Work -->
+  
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 
 </html>
