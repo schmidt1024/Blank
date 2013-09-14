@@ -78,9 +78,7 @@ if ($foundation==1) :
   $doc->addScript($tpath.'/js/jquery-1.10.2.min.js');
   $doc->addScript($tpath.'/js/foundation.min.js');
 endif;
-if ($bootstrap==1 && JVERSION>='3') :
-  JHtml::_('bootstrap.framework');
-elseif ($bootstrap==1) :
+if ($bootstrap==1) :
   $doc->addScript($tpath.'/js/jquery-1.10.2.min.js');
   $doc->addScript($tpath.'/js/jquery-noconflict.js');
   $doc->addScript($tpath.'/js/bootstrap.min.js');
@@ -93,7 +91,7 @@ if ($cssmethod=='css') :
   if ($foundation==1) $doc->addStyleSheet($tpath.'/css/foundation.min.css');
   if ($bootstrap==1) :
     $doc->addStyleSheet($tpath.'/css/bootstrap.min.css');
-    $doc->addStyleSheet($tpath.'/css/bootstrap-responsive.min.css');
+    $doc->addStyleSheet($tpath.'/css/bootstrap-theme.min.css');
     if ($fontawesome==1) $doc->addStyleSheet($tpath.'/css/font-awesome.min.css');
   endif;
 endif;
