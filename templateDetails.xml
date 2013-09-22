@@ -39,6 +39,7 @@
 		<language tag="en-GB">en-GB.tpl_frontend.ini</language>
 		<language tag="ca-CA">ca-CA.tpl_frontend.ini</language>
 		<language tag="es-ES">es-ES.tpl_frontend.ini</language>
+		<language tag="fr-FR">fr-FR.tpl_frontend.ini</language>
 	</languages>
 	
 	<positions><!-- define the positions for modules here -->
