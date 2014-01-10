@@ -1,12 +1,4 @@
-<?php  
-/*------------------------------------------------------------------------
-# author    your name or company
-# copyright Copyright (C) 2011 example.com. All rights reserved.
-# @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-# Website   http://www.example.com
--------------------------------------------------------------------------*/
-
-defined('_JEXEC') or die;
+<?php defined('_JEXEC') or die;
 
 function modChrome_slider($module, &$params, &$attribs) {
 	echo JHtml::_('sliders.panel',JText::_($module->title),'module'.$module->id);

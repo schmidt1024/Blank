@@ -2,7 +2,7 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "sass" # if sass is enabled, this filder contains the right css file
+css_dir = "sass" # if sass is enabled, this folder contains the right css file
 sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "js"
