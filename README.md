@@ -29,7 +29,7 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 * [Font Awesome 4.0.3](http://fortawesome.github.com/Font-Awesome/)
 * [normalize.css 2.1.3](http://necolas.github.com/normalize.css/)
 * [PIE 1.0.0](http://css3pie.com/)
-* [LESS incl. less.js 1.6.0](http://lesscss.org/)
+* [LESS incl. less.js 1.5.1](http://lesscss.org/)
 * [SASS](http://sass-lang.com/)
 
 ## PSD
