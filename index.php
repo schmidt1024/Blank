@@ -1,11 +1,23 @@
 <?php defined( '_JEXEC' ) or die; 
 
-include_once JPATH_THEMES.'/'.$this->template.'/logic.php'; // load logic.php
+// variables
+$app = JFactory::getApplication();
+$doc = JFactory::getDocument(); 
+$menu = $app->getMenu();
+$active = $app->getMenu()->getActive();
+$params = $app->getParams();
+$pageclass = $params->get('pageclass_sfx');
+$tpath = $this->baseurl.'/templates/'.$this->template;
+
+// generator tag
+$this->setGenerator(null);
+
+// template css
+$doc->addStyleSheet($tpath.'/css/template.css.php');
 
 ?><!doctype html>
-<!--[if IEMobile]><html class="iemobile" lang="<?php echo $this->language; ?>"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8" lang="<?php echo $this->language; ?>"> <![endif]-->
-<!--[if gt IE 8]><!-->  <html class="no-js" lang="<?php echo $this->language; ?>"> <!--<![endif]-->
+
+<html lang="<?php echo $this->language; ?>">
 
 <head>
   <jdoc:include type="head" />
@@ -14,17 +26,9 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php'; // load logic.php
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/images/apple-touch-icon-72x72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
-  <!--[if lte IE 8]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <?php if ($pie==1) : ?>
-      <style> 
-        {behavior:url(<?php echo $tpath; ?>/js/PIE.htc);}
-      </style>
-    <?php endif; ?>
-  <![endif]-->
 </head>
   
-<body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('page')).' '.$active->alias.' '.$pageclass; ?>">
+<body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>">
   
   <!-- 
     YOUR CODE HERE
@@ -33,4 +37,3 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php'; // load logic.php
 </body>
 
 </html>
-

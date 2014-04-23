@@ -1,10 +1,5 @@
 <?php 
 
-// parameter
-$foundation = $_GET['f'];
-$bootstrap = $_GET['b'];
-$fontawesome = $_GET['fa'];
-
 // initialize ob_gzhandler to send and compress data
 ob_start ("ob_gzhandler");
 // initialize compress function for whitespace removal
@@ -40,16 +35,15 @@ function compress($buffer) {
 	return $buffer;
 }
 
-if ($foundation==0 && $bootstrap==0) require('normalize.css');
-if ($foundation==1) require('foundation.css');
-if ($bootstrap==1) : 
-	require('bootstrap.css');
-	require('bootstrap-theme.css');
-	if ($fontawesome==1) require('font-awesome.css');
-endif;
+// normalize.css
+require('normalize.css');
 
+// template css
 require('template.css');
+
+// load system stylesheets for system messages and default buttons
 require('../../../media/system/css/system.css');
 require('../../system/css/system.css');
 require('../../system/css/general.css');
+
 ?>

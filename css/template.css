@@ -1,52 +1,39 @@
 /* FRONTEND CSS
 *********************************************/
+
 html {
-  overflow-y: scroll;
+	/* scrollbar fix (prevent ugly left pull for lower content sites) */
+	overflow-y: scroll;
 }
+
 body {
-  background-color: #FFFFFF;
+
 }
 
-/* LAYOUT
+
+
+/* MEDIA QUERIES
 *********************************************/
-/* Floats */
-.float-left {
-  float: left;
-}
-.float-right {
-  float: right;
-}
-.group:before,
-.group:after {
-  content: "";
-  display: table;
-}
-.group:after {
-  clear: both;
-}
-.ie7 .group {
-  zoom: 1;
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query -> mobile first strategy */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
 }
 
-/* Media Queries
-*********************************************/
-/* Retina */
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
-  
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
 }
-/* Landscape phones and down */
-@media (max-width: 480px) {
-  
-}
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-  
-}
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-  
-}
-/* Large desktop */
+
+/* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+}
+
+/* for higher resolutions (android and retina) */
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (max--moz-device-pixel-ratio: 1.5) {
   
 }

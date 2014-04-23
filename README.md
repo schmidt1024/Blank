@@ -3,34 +3,20 @@
 Light, powerful and free template for Joomla!
 for faster and easier web development.
 
-
 ## Demo
 
-Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind it's only a blank white page with disabled parameter.
+Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind it's only a blank white page.
 
 ## Functions
 
-* Crazy fast with disabled parameter
-* Start from scratch with normalize.css or
-* Choose Foundation or Bootstrap framework
-* Great Icons in Boostrap with Font Awesome
-* Support for tablets, phones and even IE7
-* Possibility to code a jQuery standalone template
-* Disable javascripts like mootools.js, caption.js etc.
-* Customisable error, offline and print page
-* Advanced properties (compressor, less, sass ...)
+* Crazy fast with css compressor
+* Start from scratch with normalize.css
+* Support for desktops, tablets and phones
+* Customizable error, offline and print page
 
 ## Addons 
 
-* [Modernizr 2.7.1](http://modernizr.com/)
-* [jQuery 1.10.2](http://jquery.com/)
-* [Foundation 5.0.2](http://foundation.zurb.com/)
-* [Bootstrap 3.0.3](http://getbootstrap.com/)
-* [Font Awesome 4.0.3](http://fortawesome.github.com/Font-Awesome/)
-* [normalize.css 2.1.3](http://necolas.github.com/normalize.css/)
-* [PIE 1.0.0](http://css3pie.com/)
-* [LESS incl. less.js 1.5.1](http://lesscss.org/)
-* [SASS](http://sass-lang.com/)
+* [normalize.css 3.0.1](http://necolas.github.com/normalize.css/)
 
 ## PSD
 
