@@ -13,10 +13,12 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 * Start from scratch with normalize.css
 * Support for desktops, tablets and phones
 * Customizable error, offline and print page
+* Integrated less compiler
 
 ## Addons 
 
 * [normalize.css 3.0.1](http://necolas.github.com/normalize.css/)
+* [lessphp v0.4.0](https://github.com/leafo/lessphp)
 
 ## PSD
 
