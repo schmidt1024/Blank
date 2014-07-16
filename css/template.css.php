@@ -1,5 +1,10 @@
 <?php 
 
+// compile less - comment the following three lines out, if your development is done.
+require "lessc.inc.php";
+$less = new lessc;
+$less->checkedCompile("template.less", "template.css");
+
 // initialize ob_gzhandler to send and compress data
 ob_start ("ob_gzhandler");
 // initialize compress function for whitespace removal
