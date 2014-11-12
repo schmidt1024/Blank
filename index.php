@@ -12,6 +12,9 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 // generator tag
 $this->setGenerator(null);
 
+// template js
+$doc->addScript($tpath.'/js/logic.js');
+
 // template css
 $doc->addStyleSheet($tpath.'/css/template.css.php');
 

@@ -5,7 +5,7 @@ for faster and easier web development.
 
 ## Demo
 
-Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind it's only a blank white page.
+Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind it's only a blank white page. The source is with you web developer.
 
 ## Functions
 
@@ -17,7 +17,7 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 
 ## Addons 
 
-* [normalize.css 3.0.1](http://necolas.github.com/normalize.css/)
+* [normalize.css 3.0.2](http://necolas.github.com/normalize.css/)
 * [lessphp v0.4.0](https://github.com/leafo/lessphp)
 
 ## PSD

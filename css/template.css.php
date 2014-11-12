@@ -1,6 +1,7 @@
 <?php 
 
-// compile less - comment the following three lines out, if your development is done.
+// compile less - comment the following three lines out, 
+// if your development is done or you don not what to user less
 require "lessc.inc.php";
 $less = new lessc;
 $less->checkedCompile("template.less", "template.css");
