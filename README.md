@@ -18,7 +18,7 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 ## Addons 
 
 * [normalize.css 3.0.2](http://necolas.github.com/normalize.css/)
-* [lessphp v0.4.0](https://github.com/leafo/lessphp)
+* [lessphp v0.5.0](https://github.com/leafo/lessphp)
 
 ## PSD
 
