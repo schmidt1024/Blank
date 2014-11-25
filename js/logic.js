@@ -1,9 +1,7 @@
-/* logic.js */
+// logic.js
 
-(function($){   
-	$(document).ready(function(){
+jQuery(document).ready(function($) {
 
-		// your code here
-
-	});
-})(jQuery);
+	// YOUR SCRIPT HERE
+	
+});
