@@ -34,8 +34,8 @@ Read the [wiki to get started](https://github.com/Bloggerschmidt/Blank-Template/
 
 ## Documentation
 
-Beginn to understand the whole template and [read the ebook](http://blank.vc/ebook.html).
+Beginn to understand the whole template by [reading the ebook](http://blank.vc/ebook.html).
 
 ## Licence
 
-The Blank Template is opensource software released under the [GPL](http://www.gnu.org/licenses/gpl-2.0.txt).
+Blank is open source software released under [GPL](http://www.gnu.org/licenses/gpl-2.0.txt).
