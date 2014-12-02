@@ -34,7 +34,7 @@ Read the [wiki to get started](https://github.com/Bloggerschmidt/Blank-Template/
 
 ## Documentation
 
-Beginn to understand the whole template by [reading the ebook](http://blank.vc/ebook.html).
+Beginn to understand the whole template by [reading the ebook](http://blank.vc/ebook/levels).
 
 ## Licence
 
