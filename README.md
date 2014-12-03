@@ -1,4 +1,4 @@
-# [Blank Template](http://blank.vc)
+# [Blank](http://blank.vc)
 
 Light, powerful and free template for Joomla!
 for faster and easier web development.
@@ -32,6 +32,10 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 
 Read the [wiki to get started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started).
 
+## Bootstrap
+
+Take a look at [Blank Boostrap Edition](https://github.com/Bloggerschmidt/Blank-Bootstrap-Edition).
+
 ## Documentation
 
 Beginn to understand the whole template by [reading the ebook](http://blank.vc/ebook/levels).
@@ -39,3 +43,4 @@ Beginn to understand the whole template by [reading the ebook](http://blank.vc/e
 ## Licence
 
 Blank is open source software released under [GPL](http://www.gnu.org/licenses/gpl-2.0.txt).
+
