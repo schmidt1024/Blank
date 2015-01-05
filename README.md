@@ -1,4 +1,4 @@
-# [Blank](http://blank.vc)
+# [Blank 3.3.0](http://blank.vc)
 
 Light, powerful and free template for Joomla!
 for faster and easier web development.
