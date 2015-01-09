@@ -1,5 +1,7 @@
 # [Blank 3.3.0](http://blank.vc)
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Bloggerschmidt/Blank?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Light, powerful and free template for Joomla!
 for faster and easier web development.
 
