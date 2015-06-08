@@ -5,15 +5,19 @@ for faster and easier web development.
 
 ## Install
 
-For developing on localhost download and install it like a normal template in Joomla! Open a terminal and go to the template directory to install it again via npm.
+Install it like a normal template in Joomla! Then install [Node](http://nodejs.org/). This template will be build with [Gulp](http://gulpjs.com/). If you haven't used Gulp before, you need to install ``gulp`` global.
+
+    npm install -g gulp
+
+Install Node dependencies
 
     npm install
 
-Run gulp to automate less and sass compiler, css and js minifier.
+Run Gulp to lint, build and minify
 
     gulp watch
 
-Now if you change some files in folder css or js (e.g. template.less or script.js) and save them, gulp will compile and minify the files. Take a look at gulpfile.js to recognize the automation.
+The building files are stored in folder /build in your template directory.
 
 ## Demo
 
