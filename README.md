@@ -9,7 +9,7 @@ Install it like a normal template in Joomla! Then install [Node](http://nodejs.o
 
     npm install -g gulp
 
-Install Node dependencies
+Go to the template directory an install Node dependencies
 
     npm install
 
