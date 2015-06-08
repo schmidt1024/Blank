@@ -1,9 +1,21 @@
-# [Blank 3.3.0](http://blank.vc)
+# [Blank 4.0.0](http://blank.vc)
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Bloggerschmidt/Blank?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Light, powerful and free template for Joomla!
 for faster and easier web development.
+
+## Install
+
+Download and install it on localhost like a normal Joomla! template in backend. Open a terminal and go to the template directory to install the template via npm, too.
+
+  npm install
+
+Run gulp to automate less compiler, css and js minifier.
+
+  gulp watch
+
+Now if you change some files in folder css or js (e.g. template.less or script.js) and save them, gulp will compile or minify them or both togehter.  
 
 ## Demo
 
@@ -11,16 +23,15 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 
 ## Functions
 
-* Crazy fast with css compressor
+* Crazy fast with gulp css and js compressor
 * Start from scratch with normalize.css
 * Support for desktops, tablets and phones
 * Customizable error, offline and print page
-* Integrated less compiler
+* incl. gulp less compiler
 
 ## Addons 
 
 * [normalize.css 3.0.2](http://necolas.github.com/normalize.css/)
-* [lessphp v0.5.0](https://github.com/leafo/lessphp)
 
 ## PSD
 
