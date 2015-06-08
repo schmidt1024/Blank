@@ -16,4 +16,4 @@ $this->setGenerator(null);
 $doc->addScript($tpath.'/js/logic.js');
 
 // template css
-$doc->addStyleSheet($tpath.'/css/template.css.php');
+$doc->addStyleSheet($tpath.'/css/template.css');
