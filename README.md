@@ -7,11 +7,11 @@ for faster and easier web development.
 
 Download and install it on localhost like a normal Joomla! template in backend. Open a terminal and go to the template directory to install the template via npm, too.
 
-  npm install
+    npm install
 
 Run gulp to automate less compiler, css and js minifier.
 
-  gulp watch
+    gulp watch
 
 Now if you change some files in folder css or js (e.g. template.less or script.js) and save them, gulp will compile or minify them or both togehter.  
 
