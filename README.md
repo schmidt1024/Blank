@@ -5,7 +5,7 @@ for faster and easier web development.
 
 ## Install
 
-Install it like a normal template in Joomla! Then install [Node](http://nodejs.org/). This template will be build with [Gulp](http://gulpjs.com/). If you haven't used Gulp before, you need to install ``gulp`` global.
+Install it like a normal template in Joomla! Then install [Node](http://nodejs.org/). This template will be build with [Gulp](http://gulpjs.com/). If you haven't used Gulp before, you need to install ``gulp`` global. Open a terminal.
 
     npm install -g gulp
 
