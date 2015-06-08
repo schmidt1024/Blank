@@ -2,7 +2,7 @@
   "name": "frontend",
   "description": "frontend template for Joomla!",
   "version": "1.0.0",
-  "homepage": "http://example.org",
+  "homepage": "http://example.com",
   "author": "Your Name",
   "private": true,
   "devDependencies": {

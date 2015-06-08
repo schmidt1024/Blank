@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 
-<extension version="2.5" type="template" client="site" method="upgrade">
+<extension version="3.4" type="template" client="site" method="upgrade">
 	
-	<name>frontend</name><!-- name the template -->
-	<creationDate>xxxx-xx-xx</creationDate><!-- the date your are beginn to code -->
-	<author>your name</author><!-- your name (oops, I repeat myself) -->
-	<copyright>Copyright © xxxx example.com</copyright><!-- for who you are coding -->
-	<authorEmail>your.name@example.com</authorEmail><!-- your email address -->
-	<authorUrl>http://www.example.com</authorUrl><!-- your url -->
-	<version>1.0.0</version><!-- give your template a number -->
+	<name>frontend</name>
+	<creationDate>xxxx-xx-xx</creationDate>
+	<author>Your Name</author>
+	<copyright>Copyright © xxxx example.com</copyright>
+	<authorEmail>your.name@example.com</authorEmail>
+	<authorUrl>http://www.example.com</authorUrl>
+	<version>1.0.0</version>
 	<description><![CDATA[ 
 		<h1>frontend</h1>
 		<p>Created by <a href="http://www.example.com" target="_blank">your name | example.com</a>.</p>
-	]]></description><!-- change the description as you like -->
+	]]></description>
 	
-	<files><!-- no need to change -->
+	<files>
+		<folder>build</folder>
 		<folder>css</folder>
 		<folder>images</folder>
+		<folder>inc</folder>
 		<folder>js</folder>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>gulpfile.js</filename>
 		<filename>index.php</filename>
-		<filename>logic.php</filename>
 		<filename>offline.php</filename>
+		<filename>package.json</filename>
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
-		<filename>favicon.ico</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
 	
-	<positions><!-- define the positions for modules here -->
+	<positions>
 		<position>debug</position>
 	</positions>
 	
