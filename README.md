@@ -38,9 +38,9 @@ Read the [wiki to get started](https://github.com/Bloggerschmidt/Blank-Template/
 
 Take a look at [Blank Boostrap Edition](https://github.com/Bloggerschmidt/Blank-Bootstrap-Edition).
 
-## Documentation
+## ~~Documentation~~
 
-Beginn to understand the whole template by [reading the ebook](http://blank.vc/ebook/levels).
+~~Beginn to understand the whole template by [reading the ebook](http://blank.vc/ebook/levels).~~
 
 ## Licence
 
