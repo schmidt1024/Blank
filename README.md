@@ -40,6 +40,10 @@ Take a look at [Blank Boostrap Edition](https://github.com/Bloggerschmidt/Blank-
 
 ~~Beginn to understand the whole template by reading the ebook.~~
 
+## Forum
+
+[Question and answers](http://old.blank.vc/) about the template in the ol' forum.
+
 ## Licence
 
 Blank is open source software released under [GPL](http://www.gnu.org/licenses/gpl-2.0.txt).
