@@ -13,9 +13,9 @@ Go to the template directory an install Node dependencies
 
     npm install
 
-Run Gulp to lint, build and minify
+Run Gulp to compile, compress and build
 
-    gulp watch
+    gulp
 
 The building files are stored in folder /build in your template directory.
 
