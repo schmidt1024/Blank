@@ -1,27 +1,18 @@
-<?php defined( '_JEXEC' ) or die; 
+<?php defined( '_JEXEC' ) or die;
 
-include_once JPATH_THEMES.'/'.$this->template.'/inc/logic.php';
+include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 
 ?><!doctype html>
 <html lang="<?php echo $this->language; ?>">
-<head>
-<jdoc:include type="head" /><?php include_once JPATH_THEMES.'/'.$this->template.'/inc/head.php'; ?>
-</head>
-  
-<body id="origin" class="<?php 
-  echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site'))
-  . ' ' .$active->alias . ' ' . $pageclass; 
-  echo $option
-  . ' view-' . $view
-  . ($layout ? ' layout-' . $layout : ' no-layout')
-  . ($task ? ' task-' . $task : ' no-task')
-  . ($itemid ? ' itemid-' . $itemid : '');
-  ?>" role="document">
 
-  <!-- 
-    YOUR CODE HERE
-  -->
-  <jdoc:include type="modules" name="debug" />
+<head>
+    <jdoc:include type="head" />
+</head>
+
+<body class="<?php echo $active->alias . ' ' . $pageclass; ?>">
+    <jdoc:include type="component" />
+    <jdoc:include type="modules" name="debug" />
+    <script src="templates/frontend/build/app.js"></script>
 </body>
 
 </html>

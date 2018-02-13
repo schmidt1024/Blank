@@ -1,4 +1,4 @@
-# [Blank 4.0.0](http://blank.vc)
+# [BL4NK 5](http://blank.vc)
 
 Light, powerful and free template for Joomla!
 for faster and easier web development.
@@ -25,15 +25,14 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 
 ## Functions
 
-* Including gulp less and sass compiler
-* Crazy fast with gulp css and js compressor
+* Including less and sass compiler
+* Crazy fast with css and js compressor
 * Start from scratch with normalize.css
-* Support for desktops, tablets and phones
 * Customizable error, offline and print page
 
 ## Addons 
 
-* [normalize.css 3.0.2](http://necolas.github.com/normalize.css/)
+* [Normalize.css](http://necolas.github.io/normalize.css/)
 
 ## PSD
 
@@ -43,17 +42,9 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 * template_preview.psd
 * template_thumbnail.psd
 
-## Get Started
-
-Read the [wiki to get started](https://github.com/Bloggerschmidt/Blank-Template/wiki/Getting-started).
-
 ## Bootstrap
 
 Take a look at [Blank Boostrap Edition](https://github.com/Bloggerschmidt/Blank-Bootstrap-Edition).
-
-## Documentation
-
-Beginn to understand the whole template by [reading the ebook](http://blank.vc/ebook/levels).
 
 ## Licence
 

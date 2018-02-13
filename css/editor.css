@@ -1,7 +1,13 @@
-/* EDITOR CSS
-*********************************************/
+/* EDITOR
+   ========================================================================== */
+
+/**
+* This file is for backend editors like JCE.
+* It will be used for print style, too.
+*/
+
 body {
-	background-color: #fff;
-	color: #000;
-	font: normal normal normal 75%/125% arial,sans-serif;
+    background-color: #fff;
+    color: #000;
+    font: normal normal normal 75%/125% arial,sans-serif;
 }
