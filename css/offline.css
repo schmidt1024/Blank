@@ -1,10 +1,15 @@
 /* OFFLINE
    ========================================================================== */
 
+html,
 body {
-	color: #000;
-	font-family: Arial,Helvetica,Sans Serif;
-	font-size: 78%;
+  height: 100vh;
+}
+
+body {
+	color: #111;
+	font-family: Arial,Sans Serif;
+	font-size: 1rem;
 	margin: 0;
 	padding: 0;
 	text-align: center;
@@ -15,19 +20,16 @@ img {
 }
 
 #frame {
-	margin: 20px auto;
+	margin: 0 auto;
 	padding: 20px;
-	width: 400px;
+	max-width: 100%;
 }
 
-#frame form {
-	text-align: left;
-}
-
-.outline {
-	background: #fff;
-	border: 1px solid #ebe7d9;
-	padding: 2px;
+@media (min-width: 768px) {
+  #frame {
+    padding-top: 32vh;
+    max-width: 400px;
+  }
 }
 
 .inputbox {
@@ -49,13 +51,9 @@ form fieldset {
 	padding: 0.2em;
 }
 
-label {
-	display: block;
-	float: left;
-}
-
 input {
-	padding: 3px;
+	padding: 5px;
+  font-size: 1rem;
 }
 
 input.button {
@@ -63,23 +61,49 @@ input.button {
 	width: auto;
 }
 
-label {
-	margin: 5px 0 2px 0;
-	width: 10em;
-}
-
 form p {
-	padding: 0.2em 0 0.2em 0;
+	padding: 0.3em 0;
 }
 
-form br {
-	display: none;
+label[for="remember"] {
+  font-size: .85rem;
 }
 
-#frmlogin {
-	margin: 0 10px 0 10px;
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
 }
 
-#frmlogin fieldset.button {
-	text-align: right;
+.alert h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: inherit;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: .5;
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 
-<extension version="3.4" type="template" client="site" method="upgrade">
-	
+<extension version="3" type="template" client="site" method="upgrade">
+
 	<name>frontend</name>
 	<creationDate>xxxx-xx-xx</creationDate>
 	<author>Your Name</author>
@@ -10,11 +10,11 @@
 	<authorEmail>your.name@example.com</authorEmail>
 	<authorUrl>http://www.example.com</authorUrl>
 	<version>1.0.0</version>
-	<description><![CDATA[ 
+	<description><![CDATA[
 		<h1>frontend</h1>
 		<p>Created by <a href="http://www.example.com" target="_blank">your name | example.com</a>.</p>
 	]]></description>
-	
+
 	<files>
 		<folder>build</folder>
 		<folder>css</folder>
@@ -32,9 +32,9 @@
 		<filename>template_thumbnail.png</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
-	
+
 	<positions>
 		<position>debug</position>
 	</positions>
-	
+
 </extension>

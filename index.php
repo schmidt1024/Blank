@@ -6,13 +6,14 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 <html lang="<?php echo $this->language; ?>">
 
 <head>
-    <jdoc:include type="head" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <jdoc:include type="head" />
 </head>
 
 <body class="<?php echo $active->alias . ' ' . $pageclass; ?>">
-    <jdoc:include type="component" />
-    <jdoc:include type="modules" name="debug" />
-    <script src="templates/frontend/build/app.js"></script>
+  <jdoc:include type="component" />
+  <jdoc:include type="modules" name="debug" />
+  <script src="templates/frontend/build/app.js"></script>
 </body>
 
 </html>
