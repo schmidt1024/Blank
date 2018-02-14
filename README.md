@@ -3,6 +3,10 @@
 Light, powerful and free template for Joomla!
 for faster and easier web development.
 
+## How to use
+
+This template is for local developing under node.js. A good workflow is to code your template localhost and if it is ready to deploy it on your live server (e.g. via sftp).
+
 ## Install
 
 Install it like a normal template in Joomla! Then install [Node](http://nodejs.org/). This template will be build with [Gulp](http://gulpjs.com/). If you haven't used Gulp before, you need to install ``gulp`` global. Open a terminal.
