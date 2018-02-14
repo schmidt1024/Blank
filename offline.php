@@ -6,9 +6,6 @@ $app = JFactory::getApplication();
 // generator tag
 $this->setGenerator(null);
 
-// Add JavaScript Frameworks
-JHtml::_('bootstrap.framework');
-
 // load css
 JHtml::_('stylesheet', 'normalize.css', array('version' => 'auto', 'relative' => true));
 JHtml::_('stylesheet', 'offline.css', array('version' => 'auto', 'relative' => true));

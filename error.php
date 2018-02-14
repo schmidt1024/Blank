@@ -2,17 +2,17 @@
 
 // variables
 $app = JFactory::getApplication();
-$doc = JFactory::getDocument(); 
-$tpath = $this->baseurl.'/templates/'.$this->template;
 
 ?><!doctype html>
 
 <html lang="<?php echo $this->language; ?>">
 
 <head>
+  <meta charset="utf-8" />
   <title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> <!-- mobile viewport optimized -->
-  <link rel="stylesheet" href="<?php echo $tpath; ?>/css/error.css?v=1">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+  <link href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/normalize.css" rel="stylesheet" />
+  <link href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/error.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,8 +22,8 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
         <?php echo htmlspecialchars($app->getCfg('sitename')); ?>
       </h1>
       <p>
-        <?php 
-          echo $this->error->getCode().' - '.$this->error->getMessage(); 
+        <?php
+          echo $this->error->getCode().' - '.$this->error->getMessage();
           if (($this->error->getCode()) == '404') {
             echo '<br />';
             echo JText::_('JERROR_LAYOUT_REQUESTED_RESOURCE_WAS_NOT_FOUND');
@@ -31,7 +31,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
         ?>
       </p>
       <p>
-        <?php echo JText::_('JERROR_LAYOUT_GO_TO_THE_HOME_PAGE'); ?>: 
+        <?php echo JText::_('JERROR_LAYOUT_GO_TO_THE_HOME_PAGE'); ?>:
         <a href="<?php echo $this->baseurl; ?>/"><?php echo JText::_('JERROR_LAYOUT_HOME_PAGE'); ?></a>.
       </p>
       <?php // render module mod_search

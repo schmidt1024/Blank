@@ -1,26 +1,37 @@
 /* ERROR
    ========================================================================== */
 
+html,
 body {
-    background:#fff;
-    color:#000;
-    font-family:Arial,Helvetica,Sans Serif;
-    font-size:78%;
-    margin:0;
-    padding:0;
-    text-align:center;
+  height: 100vh;
+}
+
+body {
+  color: #111;
+  font-family: Arial,Sans Serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 #error {
-    margin:0;
-    padding:0;
-    padding-top:40px;
-    padding-bottom:60px;
-    width:814px;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 100%;
 }
+
+@media (min-width: 768px) {
+  #error {
+    padding-top: 32vh;
+    max-width: 400px;
+  }
+}
+
 h1 {
-    margin:0 0 20px 0;
+  margin:0 0 20px 0;
 }
+
 .search label {
-    display:none
+  display:none
 }
