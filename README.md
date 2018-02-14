@@ -30,7 +30,7 @@ Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind i
 * Start from scratch with normalize.css
 * Customizable error, offline and print page
 
-## Addons 
+## Addons
 
 * [Normalize.css](http://necolas.github.io/normalize.css/)
 
