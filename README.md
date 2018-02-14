@@ -19,10 +19,6 @@ Run Gulp to compile, compress and build
 
 The building files are stored in folder /build in your template directory.
 
-## Demo
-
-Look at [http://d.blank.vc](http://d.blank.vc) to see the source. Keep in mind it's only a blank white page. The source is with you web developer.
-
 ## Functions
 
 * Including less and sass compiler
