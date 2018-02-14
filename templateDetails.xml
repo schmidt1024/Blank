@@ -18,7 +18,6 @@
 	<files>
 		<folder>build</folder>
 		<folder>css</folder>
-		<folder>images</folder>
 		<folder>js</folder>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
