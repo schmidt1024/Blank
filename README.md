@@ -5,15 +5,15 @@ for faster and easier web development.
 
 ## How to use
 
-This template is for local developing under node.js. A good workflow is to code your template localhost and if it is ready to deploy it on your live server (e.g. via sftp).
+This template is for local developing under [Node.js®](http://nodejs.org/) and [Gulp](https://gulpjs.com/). A good workflow is to code your template on localhost and if it is ready to deploy it on the live server (e.g. copy via sftp). And for shure, you should have a [Joomla!™](https://www.joomla.org/) installation ready for this.
 
 ## Install
 
-Install it like a normal template in Joomla! Then install [Node](http://nodejs.org/). This template will be build with [Gulp](http://gulpjs.com/). If you haven't used Gulp before, you need to install ``gulp`` global. Open a terminal.
+If Node.js® is installed, install Gulp via command prompt (e.g. console or terminal).
 
     npm install -g gulp
 
-Go to the template directory an install Node dependencies
+Install BL4NK like a normal template in Joomla!™. Open your command prompt and go to the template directory. Install all dependencies.
 
     npm install
 
@@ -21,7 +21,17 @@ Run Gulp to compile, compress and build
 
     gulp
 
-The building files are stored in folder /build in your template directory.
+See the magic happen on your command line if you edit some files. 
+
+## Working files
+
+Let's start the work by coding in the following files.
+
+* index.php (html)
+* js/script.js (javascript)
+* css/template.scss or .less (css)
+
+The building files are stored in folder `/build` in your template directory.
 
 ## Functions
 
