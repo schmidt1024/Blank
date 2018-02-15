@@ -52,6 +52,10 @@ The building files are stored in folder `/build` in your template directory.
 * template_preview.psd
 * template_thumbnail.psd
 
+## Documentation
+
+[Read the book about BL4NK and mastering templates for Joomla!](https://bloggerschmidt.gitbooks.io/bl4nk/)
+
 ## Bootstrap
 
 Take a look at [Blank Boostrap Edition](https://github.com/Bloggerschmidt/Blank-Bootstrap-Edition).
