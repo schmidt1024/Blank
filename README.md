@@ -1,6 +1,6 @@
 # [BL4NK 5](http://blank.vc)
 
-Light, powerful and free template for Joomla!
+Light, powerful and free template for Joomla!™
 for faster and easier web development.
 
 ## How to use
@@ -21,7 +21,7 @@ Run Gulp to compile, compress and build
 
     gulp
 
-See the magic happen on your command line if you edit some files. 
+See the magic happen on your command line if you edit some files.
 
 ## Working files
 
