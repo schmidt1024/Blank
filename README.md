@@ -1,4 +1,4 @@
-# [BL4NK 5](http://blank.vc)
+# [BL4NK](http://blank.vc)
 
 Light, powerful and free template for Joomla!™
 for faster and easier web development.
