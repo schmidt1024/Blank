@@ -1,6 +1,5 @@
 // VARIABLES
-
-const { watch, series, parallel, src, dest } = require('gulp');
+const { watch, series, src, dest } = require('gulp');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
@@ -8,14 +7,12 @@ const less = require('gulp-less');
 const sass = require('gulp-sass');
 
 // FILES
-
 function getFiles() {
     return src('node_modules/normalize.css/normalize.css')
         .pipe(dest('css/'));
 }
 
 // JAVASCRIPT
-
 function uglifyJavascript() {
   return src([
     'js/script.js'
@@ -26,7 +23,6 @@ function uglifyJavascript() {
 }
 
 // LESS
-
 function compileLess() {
   return src('css/template.less')
     .pipe(less())
@@ -35,7 +31,6 @@ function compileLess() {
 
 
 // SASS
-
 function compileSass() {
   return src('css/template.scss')
     .pipe(sass())
@@ -43,7 +38,6 @@ function compileSass() {
 }
 
 // CSS
-
 function mergeCss() {
   return src([
     'css/normalize.css',
@@ -55,7 +49,6 @@ function mergeCss() {
 }
 
 // WATCHER
-
 function watchFiles() {
   watch('js/**/*.js', uglifyJavascript);
   watch('css/**/*.less', compileLess);
