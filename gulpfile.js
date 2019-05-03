@@ -1,67 +1,74 @@
 // VARIABLES
 
-var gulp          = require('gulp');
-var uglify        = require('gulp-uglify');
-var cleanCSS      = require('gulp-clean-css');
-var concat        = require('gulp-concat');
-var less          = require('gulp-less');
-var sass          = require('gulp-sass');
-
-// WATCH
-
-gulp.task('watch', function(){
-  gulp.watch('js/**/*.js',['js']);
-  gulp.watch('css/**/*.less',['less']);
-  gulp.watch('css/**/*.scss',['sass']);
-  gulp.watch('css/**/*.css',['css']);
-});
+const { watch, series, parallel, src, dest } = require('gulp');
+const uglify = require('gulp-uglify');
+const cleanCSS = require('gulp-clean-css');
+const concat = require('gulp-concat');
+const less = require('gulp-less');
+const sass = require('gulp-sass');
 
 // FILES
 
-gulp.task('files', function() {
-    gulp.src('node_modules/normalize.css/normalize.css')
-        .pipe(gulp.dest('css'));
-});
+function getFiles() {
+    return src('node_modules/normalize.css/normalize.css')
+        .pipe(dest('css/'));
+}
 
 // JAVASCRIPT
 
-gulp.task('js', function () {
-  return gulp.src([
+function uglifyJavascript() {
+  return src([
     'js/script.js'
     ])
     .pipe(uglify())
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('build'));
-});
+    .pipe(dest('build/'));
+}
 
 // LESS
 
-gulp.task('less', function () {
-  gulp.src('css/template.less')
+function compileLess() {
+  return src('css/template.less')
     .pipe(less())
-    .pipe(gulp.dest('css'));
-});
+    .pipe(dest('css/'));
+}
+
 
 // SASS
 
-gulp.task('sass', function () {
-  gulp.src('css/template.scss')
+function compileSass() {
+  return src('css/template.scss')
     .pipe(sass())
-    .pipe(gulp.dest('css'));
-});
+    .pipe(dest('css/'));
+}
 
 // CSS
 
-gulp.task('css', function () {
-  gulp.src([
+function mergeCss() {
+  return src([
     'css/normalize.css',
     'css/template.css'
     ])
     .pipe(cleanCSS())
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('build'));
-});
+    .pipe(dest('build/'));
+}
+
+// WATCHER
+
+function watchFiles() {
+  watch('js/**/*.js', uglifyJavascript);
+  watch('css/**/*.less', compileLess);
+  watch('css/**/*.scss', compileSass);
+  watch('css/**/*.css', mergeCss);
+}
 
 // DEFAULT
-
-gulp.task('default', ['files','js','less','sass','css','watch']);
+exports.default = series(
+  getFiles, 
+  uglifyJavascript, 
+  compileLess, 
+  compileSass, 
+  mergeCss, 
+  watchFiles
+);
