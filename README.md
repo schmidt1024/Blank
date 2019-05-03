@@ -5,7 +5,7 @@ for faster and easier web development.
 
 ## How to use
 
-This template is for local developing under [Node.js®](http://nodejs.org/) and [Gulp](https://gulpjs.com/). A good workflow is to code your template on localhost and if it is ready to deploy it on the live server (e.g. copy via sftp). And for shure, you should have a [Joomla!™](https://www.joomla.org/) installation ready for this.
+This template is for local developing under [Node.js®](http://nodejs.org/) and [Gulp](https://gulpjs.com/). A good workflow is to code your template on localhost and if it is ready to deploy it on the live server. And for shure, you should have a [Joomla!™](https://www.joomla.org/) installation ready for this.
 
 ## Install
 
